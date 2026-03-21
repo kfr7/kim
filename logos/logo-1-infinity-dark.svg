@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 180" width="280" height="180">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F2C4CE"/>
+      <stop offset="50%" style="stop-color:#9B4F63"/>
+      <stop offset="100%" style="stop-color:#F2C4CE"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="180" fill="#0A0A0A"/>
+  <!-- Infinity shape — two interlocked circles -->
+  <circle cx="95" cy="90" r="62" fill="none" stroke="url(#g1)" stroke-width="2"/>
+  <circle cx="185" cy="90" r="62" fill="none" stroke="url(#g1)" stroke-width="2"/>
+  <!-- Mask center overlap with background rects -->
+  <rect x="128" y="28" width="24" height="124" fill="#0A0A0A"/>
+  <!-- Redraw inner crossing arcs to create proper infinity -->
+  <path d="M140,90 C140,60 162,28 185,28 A62,62 0 0,1 185,152 C162,152 140,120 140,90 Z" fill="#0A0A0A" stroke="url(#g1)" stroke-width="2"/>
+  <path d="M140,90 C140,60 118,28 95,28 A62,62 0 0,0 95,152 C118,152 140,120 140,90 Z" fill="#0A0A0A" stroke="url(#g1)" stroke-width="2"/>
+  <!-- K in left loop -->
+  <text x="95" y="106" font-family="Georgia, serif" font-size="52" font-weight="400" fill="#F2C4CE" text-anchor="middle">K</text>
+  <!-- V in right loop -->
+  <text x="185" y="106" font-family="Georgia, serif" font-size="52" font-weight="300" fill="#9B4F63" text-anchor="middle">V</text>
+</svg>
