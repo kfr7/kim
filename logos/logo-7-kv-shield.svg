@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" width="200" height="220">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C9A84C"/>
+      <stop offset="100%" style="stop-color:#8B6914"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="220" fill="#0D0D0D"/>
+  <!-- Shield shape -->
+  <path d="M100 15 L175 50 L175 130 Q175 185 100 205 Q25 185 25 130 L25 50 Z" fill="none" stroke="url(#g2)" stroke-width="2"/>
+  <!-- Inner shield -->
+  <path d="M100 28 L162 58 L162 128 Q162 175 100 193 Q38 175 38 128 L38 58 Z" fill="none" stroke="#8B6914" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <!-- KV -->
+  <text x="100" y="130" font-family="Georgia, serif" font-size="70" font-weight="400" fill="url(#g2)" text-anchor="middle" letter-spacing="-5">KV</text>
+  <!-- Top line in shield -->
+  <line x1="60" y1="62" x2="140" y2="62" stroke="#C9A84C" stroke-width="0.8"/>
+</svg>

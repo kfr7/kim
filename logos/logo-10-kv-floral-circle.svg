@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F2C4CE"/>
+      <stop offset="100%" style="stop-color:#A0485E"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#0A0A0A"/>
+  <!-- Outer decorative ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#A0485E" stroke-width="0.8"/>
+  <!-- 8 small circles as decorative elements -->
+  <circle cx="100" cy="12" r="3" fill="#F2C4CE"/>
+  <circle cx="100" cy="188" r="3" fill="#F2C4CE"/>
+  <circle cx="12" cy="100" r="3" fill="#F2C4CE"/>
+  <circle cx="188" cy="100" r="3" fill="#F2C4CE"/>
+  <circle cx="36" cy="36" r="2" fill="#A0485E"/>
+  <circle cx="164" cy="36" r="2" fill="#A0485E"/>
+  <circle cx="36" cy="164" r="2" fill="#A0485E"/>
+  <circle cx="164" cy="164" r="2" fill="#A0485E"/>
+  <!-- Inner filled circle -->
+  <circle cx="100" cy="100" r="72" fill="#150A0D"/>
+  <circle cx="100" cy="100" r="72" fill="none" stroke="url(#g5)" stroke-width="1.5"/>
+  <!-- KV monogram -->
+  <text x="100" y="118" font-family="Georgia, serif" font-size="65" font-weight="400" fill="url(#g5)" text-anchor="middle" letter-spacing="-4">KV</text>
+</svg>
