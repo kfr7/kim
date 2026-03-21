@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="rg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B4B8"/>
+      <stop offset="100%" style="stop-color:#9B4F63"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#111"/>
+  <!-- Elegant dumbbell - thin bar -->
+  <rect x="55" y="98" width="90" height="4" rx="2" fill="url(#rg5)"/>
+  <!-- Left dumbbell head (round, elegant) -->
+  <circle cx="50" cy="100" r="18" fill="none" stroke="url(#rg5)" stroke-width="2"/>
+  <circle cx="50" cy="100" r="11" fill="none" stroke="#9B4F63" stroke-width="1" stroke-dasharray="2 2"/>
+  <!-- Right dumbbell head -->
+  <circle cx="150" cy="100" r="18" fill="none" stroke="url(#rg5)" stroke-width="2"/>
+  <circle cx="150" cy="100" r="11" fill="none" stroke="#9B4F63" stroke-width="1" stroke-dasharray="2 2"/>
+  <!-- KV above bar -->
+  <text x="100" y="93" font-family="Georgia, serif" font-size="28" font-weight="400" fill="url(#rg5)" text-anchor="middle" letter-spacing="2">KV</text>
+  <!-- Name below -->
+  <text x="100" y="148" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="300" fill="#9B4F63" text-anchor="middle" letter-spacing="5">KIMBERLY VANESSA</text>
+  <!-- Thin underline -->
+  <line x1="55" y1="153" x2="145" y2="153" stroke="#3A1A2A" stroke-width="0.8"/>
+</svg>

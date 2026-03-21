@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D67B"/>
+      <stop offset="100%" style="stop-color:#C9A84C"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#111"/>
+  <!-- Laurel leaves left side (mirrored ellipses as leaves) -->
+  <g stroke="url(#gold2)" stroke-width="1.2" fill="none">
+    <ellipse cx="45" cy="100" rx="12" ry="6" transform="rotate(-15 45 100)"/>
+    <ellipse cx="38" cy="80" rx="11" ry="5.5" transform="rotate(-35 38 80)"/>
+    <ellipse cx="42" cy="60" rx="10" ry="5" transform="rotate(-55 42 60)"/>
+    <ellipse cx="55" cy="45" rx="10" ry="5" transform="rotate(-70 55 45)"/>
+    <ellipse cx="72" cy="34" rx="10" ry="5" transform="rotate(-85 72 34)"/>
+    <ellipse cx="45" cy="120" rx="11" ry="5.5" transform="rotate(15 45 120)"/>
+    <ellipse cx="40" cy="140" rx="10" ry="5" transform="rotate(35 40 140)"/>
+    <ellipse cx="48" cy="158" rx="10" ry="5" transform="rotate(55 48 158)"/>
+    <ellipse cx="62" cy="170" rx="10" ry="5" transform="rotate(72 62 170)"/>
+  </g>
+  <!-- Laurel leaves right side -->
+  <g stroke="url(#gold2)" stroke-width="1.2" fill="none">
+    <ellipse cx="155" cy="100" rx="12" ry="6" transform="rotate(15 155 100)"/>
+    <ellipse cx="162" cy="80" rx="11" ry="5.5" transform="rotate(35 162 80)"/>
+    <ellipse cx="158" cy="60" rx="10" ry="5" transform="rotate(55 158 60)"/>
+    <ellipse cx="145" cy="45" rx="10" ry="5" transform="rotate(70 145 45)"/>
+    <ellipse cx="128" cy="34" rx="10" ry="5" transform="rotate(85 128 34)"/>
+    <ellipse cx="155" cy="120" rx="11" ry="5.5" transform="rotate(-15 155 120)"/>
+    <ellipse cx="160" cy="140" rx="10" ry="5" transform="rotate(-35 160 140)"/>
+    <ellipse cx="152" cy="158" rx="10" ry="5" transform="rotate(-55 152 158)"/>
+    <ellipse cx="138" cy="170" rx="10" ry="5" transform="rotate(-72 138 170)"/>
+  </g>
+  <!-- Stem bottom center -->
+  <path d="M85 175 Q100 185 115 175" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+  <!-- KV center -->
+  <text x="100" y="118" font-family="Georgia, serif" font-size="68" font-weight="400" fill="url(#gold2)" text-anchor="middle" letter-spacing="-5">KV</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="crown" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D67B"/>
+      <stop offset="100%" style="stop-color:#C9A84C"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#0D0D0D"/>
+  <!-- Crown shape -->
+  <path d="M38 140 L38 90 L65 115 L100 60 L135 115 L162 90 L162 140 Z" fill="none" stroke="url(#crown)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Crown base bar -->
+  <rect x="38" y="138" width="124" height="10" rx="2" fill="url(#crown)"/>
+  <!-- Three gems on crown points -->
+  <circle cx="100" cy="60" r="5" fill="#F5D67B"/>
+  <circle cx="38" cy="90" r="4" fill="#C9A84C"/>
+  <circle cx="162" cy="90" r="4" fill="#C9A84C"/>
+  <!-- KV inside crown -->
+  <text x="100" y="130" font-family="Georgia, serif" font-size="40" font-weight="400" fill="url(#crown)" text-anchor="middle" letter-spacing="-2">KV</text>
+  <!-- Dots around KV -->
+  <circle cx="68" cy="118" r="2" fill="#C9A84C" opacity="0.5"/>
+  <circle cx="132" cy="118" r="2" fill="#C9A84C" opacity="0.5"/>
+</svg>
