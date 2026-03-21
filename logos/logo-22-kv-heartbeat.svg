@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+  <defs>
+    <linearGradient id="g22" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F2C4CE"/>
+      <stop offset="100%" style="stop-color:#9B4F63"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="200" fill="#0A0A0A"/>
+  <!-- Heartbeat / pulse line with KV integrated -->
+  <polyline points="10,100 50,100 65,55 80,145 95,80 108,100 132,100 147,55 162,145 177,80 190,100 230,100" fill="none" stroke="url(#g22)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- KV below line -->
+  <text x="120" y="168" font-family="Georgia, serif" font-size="38" font-weight="400" fill="url(#g22)" text-anchor="middle" letter-spacing="-2">KV</text>
+  <!-- Thin rule -->
+  <line x1="60" y1="148" x2="180" y2="148" stroke="#3A1020" stroke-width="1"/>
+  <text x="120" y="186" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="300" fill="#9B4F63" text-anchor="middle" letter-spacing="5">KIMBERLY VANESSA</text>
+</svg>

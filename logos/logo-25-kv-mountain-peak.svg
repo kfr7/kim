@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="g25" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B4B8"/>
+      <stop offset="100%" style="stop-color:#6B2840"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#0D0D0D"/>
+  <!-- Mountain peaks (strength/reaching the peak) -->
+  <polygon points="100,25 145,110 55,110" fill="none" stroke="url(#g25)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Second smaller peak left -->
+  <polygon points="60,70 90,110 30,110" fill="none" stroke="#6B2840" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Second smaller peak right -->
+  <polygon points="140,70 170,110 110,110" fill="none" stroke="#6B2840" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Snow cap on main peak -->
+  <polygon points="100,25 113,52 87,52" fill="url(#g25)" opacity="0.6"/>
+  <!-- Baseline -->
+  <line x1="18" y1="110" x2="182" y2="110" stroke="url(#g25)" stroke-width="1.5"/>
+  <!-- KV below mountains -->
+  <text x="100" y="152" font-family="Georgia, serif" font-size="42" font-weight="400" fill="url(#g25)" text-anchor="middle" letter-spacing="-2">KV</text>
+  <text x="100" y="175" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="300" fill="#6B2840" text-anchor="middle" letter-spacing="6">KIMBERLY VANESSA</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <defs>
+    <linearGradient id="g26" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F2C4CE"/>
+      <stop offset="50%" style="stop-color:#9B4F63"/>
+      <stop offset="100%" style="stop-color:#F2C4CE"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="160" fill="#0A0A0A"/>
+  <!-- Infinity / figure-8 shape suggesting endless strength -->
+  <path d="M120,80 C120,50 90,25 65,25 C35,25 15,48 15,80 C15,112 35,135 65,135 C90,135 120,110 120,80 C120,50 150,25 175,25 C205,25 225,48 225,80 C225,112 205,135 175,135 C150,135 120,110 120,80 Z" fill="none" stroke="url(#g26)" stroke-width="2.5"/>
+  <!-- K in left loop -->
+  <text x="65" y="90" font-family="Georgia, serif" font-size="40" font-weight="400" fill="#F2C4CE" text-anchor="middle" letter-spacing="0">K</text>
+  <!-- V in right loop -->
+  <text x="175" y="90" font-family="Georgia, serif" font-size="40" font-weight="300" fill="#9B4F63" text-anchor="middle" letter-spacing="0">V</text>
+</svg>

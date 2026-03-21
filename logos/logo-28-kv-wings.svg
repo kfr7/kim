@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180" width="260" height="180">
+  <defs>
+    <linearGradient id="g28" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B3550"/>
+      <stop offset="50%" style="stop-color:#F2C4CE"/>
+      <stop offset="100%" style="stop-color:#8B3550"/>
+    </linearGradient>
+  </defs>
+  <rect width="260" height="180" fill="#0A0A0A"/>
+  <!-- Left wing -->
+  <path d="M130,90 C115,70 95,55 70,50 C50,46 25,55 15,70 C35,65 55,68 70,80 C50,72 30,75 18,88 C38,85 58,88 75,100 C55,95 35,100 22,112 C42,110 62,112 80,122" fill="none" stroke="url(#g28)" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Right wing (mirrored) -->
+  <path d="M130,90 C145,70 165,55 190,50 C210,46 235,55 245,70 C225,65 205,68 190,80 C210,72 230,75 242,88 C222,85 202,88 185,100 C205,95 225,100 238,112 C218,110 198,112 180,122" fill="none" stroke="url(#g28)" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- KV center -->
+  <text x="130" y="105" font-family="Georgia, serif" font-size="42" font-weight="400" fill="#F2C4CE" text-anchor="middle" letter-spacing="-2">KV</text>
+  <!-- Thin horizontal line through center -->
+  <line x1="85" y1="90" x2="175" y2="90" stroke="#8B3550" stroke-width="0.8"/>
+</svg>
