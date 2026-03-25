@@ -88,9 +88,13 @@
 - Training philosophy
 - Who she's for
 
-### 4. Content Feed
+### 4. Instagram Feed
 - Latest Instagram posts (embed or oEmbed)
-- TikTok link
+
+### TikTok Section — DEFERRED to Phase 2
+- Hand-picked video grid (4-6 best videos, oEmbed)
+- Waiting for higher quality content before adding
+- Kian will supply video links when ready
 
 ### 5. Work With Me (Brand Sponsor Page)
 - Follower count, engagement rate, niche
