@@ -96,6 +96,9 @@
 - Waiting for higher quality content before adding
 - Kian will supply video links when ready
 
+**Videos confirmed so far:**
+- https://www.tiktok.com/@kim.montepeque/video/7500278697501527338
+
 ### 5. Work With Me (Brand Sponsor Page)
 - Follower count, engagement rate, niche
 - Content types
@@ -111,11 +114,23 @@
 - Gym gear picks
 
 ### 8. Email Signup
-- "Join the journey" CTA
+- Inline section in the page (footer area or dedicated section)
+- **No popup on page load** — purely opt-in, user scrolls to it
+- Single field: email + "Join" button
+- Copy: "Join the journey" or similar — low pressure
+- Provider: Resend (free tier, simple API) or Mailchimp
+- Phase 2: can add popup/exit-intent when list is more established
 
-### 9. Footer
+### 9. Privacy Policy & Terms of Service
+- `/privacy` — required for email collection (GDPR/CCPA) and brand deals
+- `/terms` — required by most brand contracts
+- Boilerplate pages, auto-generated with Kim's name/email
+- Linked in footer — nobody reads them but brands and App Store reviewers check
+
+### 10. Footer
 - IG, TikTok, email
 - Brand inquiry CTA
+- Links: Privacy Policy | Terms of Service
 
 ---
 
