@@ -27,126 +27,126 @@
 
 ---
 
-## Logo Options (see /logos folder)
-Five SVG concepts created — view in browser to preview:
-
-1. **logo-1-gold-wordmark.svg** — Black bg, gold serif "KIMBERLY / MONTEPEQUE", thin gold lines. Premium editorial feel.
-2. **logo-2-monogram-rose.svg** — "KM" monogram in circle (rose/burgundy gradient) + full name. Feminine and strong.
-3. **logo-3-minimal-white.svg** — Giant white "K" with gold dot, "STRENGTH · LIFESTYLE · GROWTH" tagline. Influencer-ready.
-4. **logo-4-dark-mauve.svg** — Light/cream background, mauve accent bars top and bottom. Brand-friendly, works on white.
-5. **logo-5-bold-modern.svg** — Bold "KIM" with gold underline, social handle included. Social-native feel.
-
-**→ Pick one or mix elements. Can refine any direction.**
-
----
-
 ## Design Direction
 
-### Aesthetic
-- **Vibe:** Premium fitness / elevated influencer — NOT gym-bro, NOT pink-and-pastel
-- **Feel:** Editorial, confident, aspirational
-- **References:** Think Gymshark meets Vogue fitness editorial
+### Theme (confirmed March 25, 2026)
+- **Dark site** — near-black background (#0A0A0A or similar)
+- **Primary accent:** Purple — deep violet/purple as the brand color
+- **Text:** White/light grey — NOT purple text (accent use only)
+- **Colorblind accessible** — purple must have sufficient contrast; never rely on color alone to convey info (use icons + labels too)
+- **Feel:** Premium, elevated, feminine but strong — NOT gym-bro, NOT pastel
 
-### Colors (proposed — to be confirmed with Kim)
-- **Option A:** Black + warm gold (#C9A84C) — luxury, timeless
-- **Option B:** Deep mauve (#6B3654) + cream — feminine, sophisticated
-- **Option C:** Charcoal + rose gold — soft but strong
+### Colors
+- Background: `#0A0A0A` (near-black)
+- Primary accent: Deep purple `#7B2FBE` or `#6B21A8`
+- Secondary: Soft lavender for hover states `#A855F7`
+- Text: `#F5F5F5` (white) and `#A1A1AA` (grey for secondary)
+- Surface/card: `#141414` or `#1A1A2E`
 
 ### Typography
-- **Headlines:** Bold serif (Georgia / Playfair Display) — premium feel
-- **Body:** Clean sans-serif (Inter / Helvetica Neue)
-- **Accent:** Light tracking, uppercase labels
+- **Headlines:** Bold serif (Playfair Display) — premium feel
+- **Body:** Clean sans-serif (Inter)
+- **Accent:** Uppercase tracking for labels
 
 ### Photography Style
 - High contrast, moody gym shots
-- Confident poses, not overly sexualized
-- Mix of gym + lifestyle (outfit, food, daily life)
-- Consistent warm or cool tone filter across all photos
+- Confident poses
+- Mix of gym + lifestyle
+- Consistent cool/dark tone filter
+
+---
+
+## Logo
+- **Active logo:** `logos/kv-logo-v1.jpg` — KV monogram + infinity symbol + dumbbells, purple/pink gradient ✅
+- Need 2 more variations (will generate manually on Recraft and commit)
+- Kian to review all 3 and pick final direction with Kim
+
+---
+
+## Photos
+- `photos/kim-2020-gym.jpg` — earliest gym photo (2020), shows beginning of journey
+- Kian has 2 years of recent photos to add — will supply
+- Strategy: before/after or journey narrative (2020 → now)
 
 ---
 
 ## Site Sections
 
 ### 1. Hero
-- Full-bleed photo or video loop (gym footage)
+- Full-bleed photo or video loop
 - Name + tagline
-- Two CTAs: **Follow on Instagram** | **Work With Me**
+- CTAs: **Follow on Instagram** | **Work With Me**
 
-### 2. About / Her Story
-- Journey narrative — where she started, why fitness, what drives her
-- Personal and raw, not corporate
-- 1-2 photos
+### 2. Her Story (Journey)
+- 2020 → now transformation narrative — raw, personal
+- Use `photos/kim-2020-gym.jpg` as the "beginning" anchor
+- Add recent photos to contrast the growth
+- Short bio in her words (still needed from Kim)
 
 ### 3. What She Does / Niche
 - Glutes & legs specialist
 - Training philosophy
-- Who she's for (beginner/intermediate women)
+- Who she's for
 
 ### 4. Content Feed
-- Instagram embed (latest posts, auto-updating)
-- TikTok embed or link
+- Latest Instagram posts (embed or oEmbed)
+- TikTok link
 
 ### 5. Work With Me (Brand Sponsor Page)
-- Stats: followers, engagement rate, niche
-- Content types she creates
-- Past collaborations (add as she grows)
-- Inquiry form → her email
+- Follower count, engagement rate, niche
+- Content types
+- Past collabs (add as they grow)
+- Inquiry form → email
 
 ### 6. Programs / Resources (Phase 2)
-- Placeholder for future workout PDFs, guides
-- "Coming Soon" with email capture
+- Placeholder + email capture
 
 ### 7. Shop / Favorites
 - Amazon affiliate links
-- Supplement codes she uses
-- Gym gear recommendations
+- Supplement codes
+- Gym gear picks
 
 ### 8. Email Signup
-- "Join the journey" — freebie offer (workout tip PDF, etc.)
-- Mailchimp or Resend integration
+- "Join the journey" CTA
 
-### 9. Contact / Footer
-- Instagram, TikTok links
-- Email
+### 9. Footer
+- IG, TikTok, email
 - Brand inquiry CTA
 
 ---
 
-## Content Strategy Notes
-- **Hero niche:** "Glute growth for women" — own this lane
-- **90-day series:** Document glute growth journey start to finish
-- **Collab targets:** Other LA fitness creators 1k-10k range
-- **Monetization path:** Amazon affiliate → micro brand deals → digital products → coaching
-
----
-
-## Monetization Plan
-| Phase | Followers | Revenue Sources |
-|-------|-----------|-----------------|
-| Now | 2k | Amazon affiliate, micro-influencer deals |
-| Phase 2 | 5k | Paid brand posts ($200-500), PDF workout plan |
-| Phase 3 | 10k+ | Brand retainers, online coaching, merch |
-
----
-
-## Domain
-- TBD — ideas: kimmontepeque.com, kimfit.co, kimvanessa.com
-
----
-
-## Assets Needed From Kim
-- [ ] 3-5 hero/feature photos (high quality gym shots)
-- [ ] "Story" photos (before/after or journey pics)
+## Assets Still Needed From Kim
+- [ ] 2-5 recent hero/feature photos (high quality, 2024-2026)
 - [ ] Short bio in her own words
-- [ ] Preferred color direction (from logo options)
-- [ ] Any brand she already works with or wants to work with
+- [ ] Any brands she already works with
 - [ ] Tagline / how she describes herself
+- [ ] Domain choice (ideas: kimmontepeque.com, kimfit.co, kimvanessa.com)
+
+## Assets In Hand
+- [x] `photos/kim-2020-gym.jpg` — 2020 starting point
+- [x] `logos/kv-logo-v1.jpg` — first logo direction
+
+---
+
+## Accessibility
+- All purple accent elements must meet WCAG AA contrast (4.5:1 for text, 3:1 for UI)
+- Never use color alone to indicate state — always pair with icon or label
+- Test with grayscale filter before launch
+
+---
+
+## Monetization Path
+| Phase | Followers | Revenue |
+|-------|-----------|---------|
+| Now | 2k | Amazon affiliate, micro-brand deals |
+| Phase 2 | 5k | Paid posts ($200-500), PDF workout plan |
+| Phase 3 | 10k+ | Brand retainers, coaching, merch |
 
 ---
 
 ## Nice to Have (Phase 2)
-- Spanish language option
-- Dark/light mode toggle
-- Blog/journal section for longer content
-- Booking system for 1-on-1 coaching sessions
+- Spanish language toggle
+- Dark/light mode (dark is default)
+- Blog/journal section
+- Booking for 1-on-1 coaching
 - Newsletter with workout tips
