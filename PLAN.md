@@ -63,10 +63,37 @@
 
 ---
 
+## Copy (Bio & Tagline)
+
+### Tagline (hero section)
+> **Built different. Entrenada con propósito.**
+> *(Built different. Trained with purpose.)*
+
+Alternatives:
+- "Glutes, grind, and good vibes."
+- "From the beginning. Every rep. Still going."
+- "No shortcuts. Solo disciplina."
+
+### Bio (About / Her Story)
+> I'm Kim — LA-based, Latina, and obsessed with what the body is capable of.
+>
+> It started in 2020 with zero experience and a lot of heart. No trainer, no plan — just showing up. Over the years I built strength, confidence, and a community of women who actually want to see real results.
+>
+> My thing is glutes and legs. Heavy, intentional, consistent. If you're here for the transformation — física y mental — you're in the right place.
+>
+> *Follow along. Let's build.*
+
+### Short bio (Work With Me / brand page)
+> Kim Montepeque is a Latina fitness creator based in Los Angeles, CA. She specializes in glute and leg training and has been documenting her strength journey since 2020. Her audience is women 18–35 who are serious about building strength and looking for real, relatable content — not filters and fads.
+
 ## Photos
-- `photos/kim-2020-gym.jpg` — earliest gym photo (2020), shows beginning of journey
-- Kian has 2 years of recent photos to add — will supply
-- Strategy: before/after or journey narrative (2020 → now)
+- `photos/kim-2020-gym.jpg` — 2020 starting photo (journey beginning)
+- `photos/kim-gym-mirror-red-shorts.jpg` — mirror selfie, red shorts, headphones
+- `photos/kim-bathroom-pink-leggings.jpg` — side profile, pink leggings, cream top
+- `photos/kim-planetfitness-white-leggings.jpg` — white leggings, black sports bra, abs
+- `photos/kim-back-tattoo-pulldown.jpg` — back tattoo + lat pulldown action shot
+- `photos/kim-locker-room-converse.jpg` — side profile, grey shorts, Converse
+- `photos/kim-locker-room-glutes-teal.jpg` — teal sports bra, grey leggings, glutes focus
 
 ---
 
