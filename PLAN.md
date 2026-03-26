@@ -125,6 +125,8 @@ Alternatives:
 
 **Videos confirmed so far:**
 - https://www.tiktok.com/@kim.montepeque/video/7500278697501527338
+- https://www.tiktok.com/@kim.montepeque/video/7466543043898920235
+- https://www.tiktok.com/@kim.montepeque/video/7615001525147979038
 
 ### 5. Work With Me (Brand Sponsor Page)
 - Follower count, engagement rate, niche
