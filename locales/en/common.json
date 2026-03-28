@@ -1,0 +1,306 @@
+{
+  "nav": {
+    "home": "Home",
+    "workouts": "Workouts",
+    "diet": "Diet",
+    "startOver": "Start Over",
+    "workWithMe": "Work With Me",
+    "toggleLang": "ES"
+  },
+  "hero": {
+    "name": "Kim Montepeque",
+    "tagline": "Built different. Entrenada con propósito.",
+    "followInstagram": "Follow on Instagram",
+    "workWithMe": "Work With Me"
+  },
+  "story": {
+    "label": "Her Story",
+    "heading": "From the beginning. Every rep. Still going.",
+    "beginningLabel": "2018 — The Beginning",
+    "nowLabel": "Now",
+    "body1": "I'm Kim — LA-based, Latina, and obsessed with what the body is capable of.",
+    "body2": "It started in 2018 with zero experience and a lot of heart. No trainer, no plan — just showing up. Over the years I built strength, confidence, and a community of women who actually want to see real results.",
+    "body3": "My thing is glutes and legs. Heavy, intentional, consistent. If you're here for the transformation — física y mental — you're in the right place.",
+    "cta": "Follow along. Let's build."
+  },
+  "niche": {
+    "label": "What She Does",
+    "heading": "Glutes & Legs Specialist",
+    "philosophy": {
+      "heading": "Training Philosophy",
+      "body": "Heavy, intentional, and consistent. Every session is built around progressive overload — tracking personal lifts, competing with your past self, and showing up with purpose. No shortcuts. Solo disciplina."
+    },
+    "forWho": {
+      "heading": "Who This Is For",
+      "body": "Women 18–35 who are done with generic content and want real, relatable fitness — strength-focused, no filters, no fads. If you're ready to build something lasting, you're in the right place."
+    },
+    "pillars": [
+      { "title": "Glutes & Legs", "description": "The foundation of her training. Hip thrusts, Bulgarian splits, RDLs — built for results." },
+      { "title": "Progressive Overload", "description": "Track your lifts. Beat your last set. Compete with yesterday's you." },
+      { "title": "Real Content", "description": "No filters, no fads. Just consistent effort and honest results." }
+    ]
+  },
+  "instagram": {
+    "label": "Instagram",
+    "heading": "Follow the Journey",
+    "subheading": "@kim.montepeque",
+    "cta": "View on Instagram",
+    "followerCount": "2,204 followers"
+  },
+  "emailSignup": {
+    "heading": "Join the Journey",
+    "subheading": "Workouts, nutrition tips, and real talk — straight to your inbox.",
+    "placeholder": "your@email.com",
+    "cta": "Join",
+    "successMessage": "You're in! Check your inbox.",
+    "errorMessage": "Something went wrong. Try again."
+  },
+  "footer": {
+    "tagline": "Built different. Entrenada con propósito.",
+    "contact": "kimberlyvanessagym@gmail.com",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "rights": "© 2025 Kim Montepeque. All rights reserved."
+  },
+  "workouts": {
+    "pageTitle": "My Workouts",
+    "pageDescription": "Kim's full training split — glutes, pull, legs, push, and cardio. Built for real results.",
+    "heading": "My Training Split",
+    "subheading": "A glute-focused, upper-body-balanced rotation with one rest day per week.",
+    "tabs": {
+      "glutes": "Glutes",
+      "pull1": "Pull",
+      "legsGlutes": "Legs + Glutes",
+      "push": "Push",
+      "pull2": "Pull"
+    },
+    "exerciseLabel": "Exercises",
+    "gluteDay": {
+      "title": "Glute Day",
+      "description": "Focused on glute development, lower-body strength, and shaping. Starts with the strongest glute-dominant movement and progresses through unilateral work, hinge patterns, and accessory movements.",
+      "exercises": [
+        { "name": "Hip Thrusts", "note": "Lead with your strongest glute movement — full range, controlled tempo." },
+        { "name": "Bulgarian Split Squats", "note": "Unilateral work for stability and balanced glute development." },
+        { "name": "Romanian Deadlifts", "note": "Posterior chain focus — glutes and hamstrings with hip hinge." },
+        { "name": "Adductor Machine", "note": "Inner thigh targeting for complete lower-body development." },
+        { "name": "Abductor Machine", "note": "Outer glute focus — builds width and shape." },
+        { "name": "Calf Raises", "note": "Round out the session with lower leg work." }
+      ]
+    },
+    "pullDay": {
+      "title": "Pull Day",
+      "description": "Focuses on the back, rear shoulder support, posture, and upper-body pulling strength. Includes a 6-minute ab circuit.",
+      "exercises": [
+        { "name": "Lat Pulldowns", "note": "Vertical pulling — builds back width and lat development." },
+        { "name": "Rows", "note": "Horizontal pulling — thickness and mid-back strength." },
+        { "name": "Face Pulls with Rope", "note": "Occasional — rear delts and upper back support." },
+        { "name": "6-Minute Ab Circuit", "note": "45s on / 15s off: Scissors, Upper Ab Crunches, Leg & Chest Lifts, Side Oblique Crunches." }
+      ]
+    },
+    "legsGlutesDay": {
+      "title": "Legs with Glute Focus",
+      "description": "Still glute-involved, but places more emphasis on overall leg development. Combines glute activation with heavier compound leg work.",
+      "exercises": [
+        { "name": "Hip Thrusts", "note": "Glute activation before heavier compound work." },
+        { "name": "Squats", "note": "Full lower-body stimulus — the foundation of leg day." },
+        { "name": "Leg Extensions", "note": "Quad isolation — controlled squeeze at the top." },
+        { "name": "Lying Hamstring Curls", "note": "Hamstring isolation for balanced leg development." },
+        { "name": "Calf Raises", "note": "Complete the session with lower leg work." }
+      ]
+    },
+    "pushDay": {
+      "title": "Push Day",
+      "description": "Focused on chest, shoulders, and triceps. Machine-based pressing, chest isolation, and shoulder accessory work.",
+      "exercises": [
+        { "name": "Push Machine", "note": "Primary pressing movement — chest and front delt focus." },
+        { "name": "Fly Machine", "note": "Chest isolation — stretch and squeeze through full range." },
+        { "name": "Incline Chest Press", "note": "Every other push day — upper chest emphasis." },
+        { "name": "Tricep Pushdowns", "note": "Arm development and pressing support." },
+        { "name": "Dumbbell Lateral Raises", "note": "Shoulder width — controlled, no momentum." },
+        { "name": "Dumbbell Front Raises", "note": "Occasional — front delt variation." }
+      ]
+    },
+    "cardio": {
+      "heading": "Cardio",
+      "subheading": "Every other training day, after lifting. Rotate through these options:",
+      "options": [
+        { "name": "StairMaster", "duration": "~20 min", "note": "Steady pace, glute-friendly cardio." },
+        { "name": "2-Mile Run", "duration": "Your pace", "note": "Build endurance and mental discipline." },
+        { "name": "Stationary Bike", "duration": "~20 min", "note": "Low-impact, consistent effort." }
+      ],
+      "note": "Cardio is optional but consistent — part of the overall routine, not a punishment."
+    },
+    "overloadNote": {
+      "heading": "Progressive Overload",
+      "body": "Weights are not prescribed. Track your own lifts, record your performance, and focus on improving against your past self. Compete with yesterday's you — not anyone else."
+    }
+  },
+  "diet": {
+    "pageTitle": "My Diet",
+    "pageDescription": "Kim's daily nutrition structure — high-protein, balanced meals, and recovery principles.",
+    "heading": "Daily Nutrition",
+    "subheading": "Simple, balanced, and repeatable. Built to support training, recovery, and long-term results.",
+    "breakfast": {
+      "heading": "Breakfast",
+      "description": "A strong start with protein, light carbohydrates, and nutrient-dense foods.",
+      "items": ["2 eggs", "Tea", "Fruit", "Protein pancakes"]
+    },
+    "lunch": {
+      "heading": "Lunch",
+      "description": "Centered around a primary protein source, a carbohydrate for energy, and vegetables.",
+      "protein": ["Salmon", "Chicken", "Beef"],
+      "carbs": ["Sweet potatoes", "Rice", "Pasta"],
+      "note": "Vegetables on the side."
+    },
+    "dinner": {
+      "heading": "Dinner",
+      "description": "Similar structure to lunch, slightly smaller portions depending on hunger and activity.",
+      "protein": ["Salmon", "Chicken", "Beef"],
+      "carbs": ["Rice", "Sweet potatoes", "Pasta"],
+      "note": "Slightly smaller portions than lunch."
+    },
+    "principles": {
+      "heading": "Nutrition Principles",
+      "items": [
+        "Prioritize protein at every meal",
+        "Include carbohydrates to support energy and training",
+        "Eat vegetables and fruit daily",
+        "Keep meals simple and repeatable",
+        "Focus on consistency over perfection",
+        "Adjust portions based on goals and activity level"
+      ]
+    },
+    "recovery": {
+      "heading": "Recovery Is Part of the Plan",
+      "subheading": "Nutrition alone isn't recovery. Real results come from treating rest as seriously as training.",
+      "pillars": [
+        { "title": "Nutrition", "body": "Food is fuel and repair. High-protein meals support muscle growth and help you show up strong every session." },
+        { "title": "Jacuzzi", "body": "Active recovery. Heat helps relax muscles, reduce soreness, and bring the body back down after intense training." },
+        { "title": "Sleep", "body": "Non-negotiable. Your body builds during rest — not during the workout. Protect your sleep like a training priority." },
+        { "title": "Water", "body": "Hydration affects everything: performance, recovery, focus. Drink consistently throughout the day." }
+      ]
+    }
+  },
+  "startOver": {
+    "pageTitle": "What I Would Do If I Started Over",
+    "pageDescription": "Kim's honest advice for fitness beginners — what she'd do differently from day one.",
+    "heading": "What I Would Do If I Started Over",
+    "intro": "If I had to start my fitness journey over again, I would make things much simpler from the beginning. I would stop chasing perfect routines, random trends, and unrealistic expectations — and I would focus on doing the basics well for long enough to actually see progress.",
+    "sections": [
+      {
+        "heading": "Form Before Weight",
+        "body": "The first thing I would do is focus on form before trying to lift heavy. A lot of people rush into increasing weight too quickly, but if your form isn't solid, you're not getting the full benefit of the exercise. Before worrying about how heavy the weight is, I would focus on learning the movement correctly, controlling the tempo, and understanding exactly what muscle I'm trying to target."
+      },
+      {
+        "heading": "Build the Mind-Muscle Connection",
+        "body": "I would make sure to build a real mind-muscle connection first. That means learning how to actually feel the muscle working during each exercise rather than just moving weight from point A to point B. Especially for glute and leg training, this matters a lot. If you can't feel the glutes working, adding more weight isn't always the answer. The better approach is often to reduce the weight, clean up the form, slow down the movement, and build better control first."
+      },
+      {
+        "heading": "Lift Heavier Only After the Basics Are In Place",
+        "body": "I would also remind myself that lifting heavier is only useful once the basics are already in place. Progressive overload matters, but it works best when built on proper mechanics. Lightweight with perfect form is more valuable than heavier weight with poor control. Once the movement is stable, the muscle is being properly targeted, and the technique is consistent — then it makes sense to gradually push the weight forward."
+      },
+      {
+        "heading": "Stop Changing the Routine",
+        "body": "If I had to start over, I would also stop changing my routine too often. I would choose a structured split, stay consistent, and give the plan enough time to work. I would track my workouts, record my lifts, and focus on improving my own performance over time instead of comparing myself to other people."
+      },
+      {
+        "heading": "Keep Nutrition Simple",
+        "body": "With nutrition, I would keep things simple and repeatable. I would focus on protein, balanced meals, and consistency rather than trying to eat perfectly all the time. Results come from doing the fundamentals consistently — not from being extreme for a short period of time."
+      },
+      {
+        "heading": "Be More Patient",
+        "body": "Most importantly, I would be more patient. Real progress takes time. Strength, confidence, body composition, and visible development all come from repeated effort over weeks and months — not from trying to rush the process."
+      }
+    ],
+    "priorities": {
+      "heading": "If I Were Starting Over, My Priorities Would Be:",
+      "items": [
+        "Learn proper form first",
+        "Build a mind-muscle connection",
+        "Use lighter weight until technique is solid",
+        "Progressively overload once the basics are in place",
+        "Stay consistent with a structured split",
+        "Track workouts and improvements",
+        "Keep nutrition simple and repeatable",
+        "Compete with my past self, not other people"
+      ]
+    }
+  },
+  "workWithMe": {
+    "pageTitle": "Work With Me",
+    "pageDescription": "Partner with Kim Montepeque — Latina fitness creator, glutes & legs specialist, 2,204 IG followers.",
+    "heading": "Work With Me",
+    "subheading": "Authentic content. Real audience. Serious results.",
+    "stats": {
+      "followers": "2,204",
+      "followersLabel": "Instagram Followers",
+      "niche": "Glutes & Legs",
+      "nicheLabel": "Specialty",
+      "location": "Los Angeles, CA",
+      "locationLabel": "Based In",
+      "audience": "Women 18–35",
+      "audienceLabel": "Core Audience"
+    },
+    "about": {
+      "heading": "About Kim",
+      "body": "Kim Montepeque is a Latina fitness creator based in Los Angeles, CA. She specializes in glute and leg training and has been documenting her strength journey since 2018. Her audience is women 18–35 who are serious about building strength and looking for real, relatable content — not filters and fads."
+    },
+    "contentTypes": {
+      "heading": "Content She Creates",
+      "items": [
+        { "type": "Workout Videos", "description": "Exercise demos, full training sessions, and technique breakdowns." },
+        { "type": "Transformation Content", "description": "Progress updates, before/after comparisons, and honest journey storytelling." },
+        { "type": "Nutrition & Lifestyle", "description": "Meal prep, daily routines, and sustainable habit content." },
+        { "type": "Product Features", "description": "Gym wear, supplements, and equipment she actually uses." }
+      ]
+    },
+    "inquiry": {
+      "heading": "Get In Touch",
+      "subheading": "Reach out directly for brand partnership inquiries.",
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Tell me about your brand and what you're looking for...",
+      "cta": "Send Inquiry",
+      "directEmail": "or email directly:",
+      "successMessage": "Message sent! I'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please email directly."
+    }
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy",
+    "heading": "Privacy Policy",
+    "lastUpdated": "Last updated: March 2025"
+  },
+  "terms": {
+    "pageTitle": "Terms of Service",
+    "heading": "Terms of Service",
+    "lastUpdated": "Last updated: March 2025"
+  },
+  "notFound": {
+    "heading": "Looks like this page skipped leg day.",
+    "subheading": "The page you're looking for doesn't exist.",
+    "cta": "Back to Home"
+  },
+  "meta": {
+    "home": {
+      "title": "Kim Montepeque — Fitness Creator & Glutes Specialist",
+      "description": "LA-based Latina fitness creator. Glutes & legs specialist. Real training, real results. Follow the journey on Instagram @kim.montepeque."
+    },
+    "workouts": {
+      "title": "My Training Split — Kim Montepeque",
+      "description": "Kim's full workout split: glutes, pull, legs, push, and cardio. Built for real results, not shortcuts."
+    },
+    "diet": {
+      "title": "My Diet & Nutrition — Kim Montepeque",
+      "description": "Kim's daily nutrition structure — high-protein meals, recovery principles, and sustainable habits."
+    },
+    "startOver": {
+      "title": "What I'd Do If I Started Over — Kim Montepeque",
+      "description": "Kim's honest advice for fitness beginners. What she'd change, what she learned, and what actually works."
+    },
+    "workWithMe": {
+      "title": "Work With Me — Kim Montepeque",
+      "description": "Partner with Kim Montepeque. Latina fitness creator, 2,204 Instagram followers, glutes & legs specialist."
+    }
+  }
+}

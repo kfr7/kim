@@ -1,0 +1,59 @@
+import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('meta.startOver');
+  return {
+    title: t('title'),
+    description: t('description'),
+    openGraph: { title: t('title'), description: t('description') },
+  };
+}
+
+export default async function StartOverPage() {
+  const t = await getTranslations('startOver');
+  const sections = t.raw('sections') as Array<{ heading: string; body: string }>;
+  const priorities = t.raw('priorities.items') as string[];
+
+  return (
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Advice</p>
+      <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-8 leading-tight">
+        {t('heading')}
+      </h1>
+
+      <p className="text-text-secondary text-lg leading-relaxed mb-12 border-l-2 border-accent pl-5 italic">
+        {t('intro')}
+      </p>
+
+      <div className="space-y-10">
+        {sections.map((section, i) => (
+          <div key={i}>
+            <h2 className="font-serif text-2xl font-bold text-text-primary mb-3">
+              {section.heading}
+            </h2>
+            <p className="text-text-secondary leading-relaxed">{section.body}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Priorities callout */}
+      <div className="mt-16 bg-surface-2 rounded-2xl p-8 border border-accent/20">
+        <div className="w-8 h-0.5 bg-accent mb-5" />
+        <h2 className="font-serif text-2xl font-bold text-text-primary mb-6">
+          {t('priorities.heading')}
+        </h2>
+        <ol className="space-y-3">
+          {priorities.map((item, i) => (
+            <li key={i} className="flex items-start gap-3">
+              <span className="text-accent font-bold font-serif text-lg leading-none pt-0.5 w-5 shrink-0">
+                {i + 1}
+              </span>
+              <span className="text-text-primary">{item}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  );
+}
