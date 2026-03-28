@@ -37,7 +37,7 @@ export default async function HomePage() {
           alt="Kimberly Vanessa — hero"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
           sizes="100vw"
         />
         {/* Gradient overlay */}
