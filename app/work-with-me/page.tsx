@@ -17,6 +17,7 @@ export default async function WorkWithMePage() {
 
   const stats = [
     { value: t('stats.followers'), label: t('stats.followersLabel') },
+    { value: t('stats.tiktokFollowers'), label: t('stats.tiktokFollowersLabel') },
     { value: t('stats.niche'), label: t('stats.nicheLabel') },
     { value: t('stats.location'), label: t('stats.locationLabel') },
     { value: t('stats.audience'), label: t('stats.audienceLabel') },

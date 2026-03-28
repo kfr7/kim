@@ -17,11 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const TIKTOK_VIDEO_IDS = [
-  '7500278697501527338',
-  '7466543043898920235',
-  '7615001525147979038',
-];
+const TIKTOK_VIDEO_ID = '7500278697501527338';
 
 export default async function HomePage() {
   const tHero = await getTranslations('hero');
@@ -172,20 +168,19 @@ export default async function HomePage() {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-2">
             {tTiktok('heading')}
           </h2>
-          <p className="text-text-secondary mb-10">{tTiktok('subheading')}</p>
+          <p className="text-text-secondary mb-2">{tTiktok('subheading')}</p>
+          <p className="text-accent font-semibold text-sm mb-10">{tTiktok('followerCount')}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {TIKTOK_VIDEO_IDS.map((id) => (
-              <div key={id} className="relative w-full" style={{ paddingBottom: '177.78%' }}>
-                <iframe
-                  src={`https://www.tiktok.com/embed/v2/${id}`}
-                  className="absolute inset-0 w-full h-full rounded-2xl"
-                  allowFullScreen
-                  allow="encrypted-media"
-                  title={`TikTok video ${id}`}
-                />
-              </div>
-            ))}
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-sm" style={{ paddingBottom: '177.78%' }}>
+              <iframe
+                src={`https://www.tiktok.com/embed/v2/${TIKTOK_VIDEO_ID}`}
+                className="absolute inset-0 w-full h-full rounded-2xl"
+                allowFullScreen
+                allow="encrypted-media"
+                title="Kim Montepeque TikTok"
+              />
+            </div>
           </div>
 
           <div className="text-center mt-8">

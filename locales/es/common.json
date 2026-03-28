@@ -8,7 +8,7 @@
     "toggleLang": "EN"
   },
   "hero": {
-    "name": "Kim Montepeque",
+    "name": "Kimberly Vanessa",
     "tagline": "Built different. Entrenada con propósito.",
     "followInstagram": "Seguir en Instagram",
     "workWithMe": "Trabaja Conmigo"
@@ -35,9 +35,18 @@
       "body": "Mujeres de 18 a 35 años que ya están cansadas del contenido genérico y quieren fitness real y cercano — enfocado en la fuerza, sin filtros ni modas. Si estás lista para construir algo duradero, estás en el lugar correcto."
     },
     "pillars": [
-      { "title": "Glúteos y Piernas", "description": "La base de su entrenamiento. Hip thrusts, sentadillas búlgaras, RDLs — construido para dar resultados." },
-      { "title": "Sobrecarga Progresiva", "description": "Registra tus levantamientos. Supera tu última serie. Compite con la versión de ayer." },
-      { "title": "Contenido Real", "description": "Sin filtros, sin modas. Solo esfuerzo constante y resultados honestos." }
+      {
+        "title": "Glúteos y Piernas",
+        "description": "La base de su entrenamiento. Hip thrusts, sentadillas búlgaras, RDLs — construido para dar resultados."
+      },
+      {
+        "title": "Sobrecarga Progresiva",
+        "description": "Registra tus levantamientos. Supera tu última serie. Compite con la versión de ayer."
+      },
+      {
+        "title": "Contenido Real",
+        "description": "Sin filtros, sin modas. Solo esfuerzo constante y resultados honestos."
+      }
     ]
   },
   "instagram": {
@@ -51,7 +60,8 @@
     "label": "TikTok",
     "heading": "Mira los Videos",
     "subheading": "Clips de entrenamiento, tips y contenido real del gym.",
-    "cta": "Seguir en TikTok"
+    "cta": "Seguir en TikTok",
+    "followerCount": "33K seguidores"
   },
   "emailSignup": {
     "heading": "Únete al Recorrido",
@@ -66,7 +76,7 @@
     "contact": "kimberlyvanessagym@gmail.com",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
-    "rights": "© 2025 Kim Montepeque. Todos los derechos reservados."
+    "rights": "© 2025 Kimberly Vanessa. Todos los derechos reservados."
   },
   "workouts": {
     "pageTitle": "Mis Entrenamientos",
@@ -85,54 +95,129 @@
       "title": "Día de Glúteos",
       "description": "Enfocado en el desarrollo de glúteos, fuerza en la parte inferior del cuerpo y definición. Comienza con el movimiento más fuerte dominante de glúteos.",
       "exercises": [
-        { "name": "Hip Thrusts", "note": "Lidera con tu movimiento de glúteos más fuerte — rango completo, tempo controlado." },
-        { "name": "Sentadillas Búlgaras", "note": "Trabajo unilateral para estabilidad y desarrollo equilibrado de glúteos." },
-        { "name": "Peso Muerto Rumano", "note": "Enfoque en la cadena posterior — glúteos y femorales con bisagra de cadera." },
-        { "name": "Máquina de Aductores", "note": "Trabajo en la cara interna del muslo para un desarrollo completo." },
-        { "name": "Máquina de Abductores", "note": "Enfoque en glúteos externos — construye anchura y forma." },
-        { "name": "Elevaciones de Pantorrillas", "note": "Completa la sesión con trabajo en la parte inferior de las piernas." }
+        {
+          "name": "Hip Thrusts",
+          "note": "Lidera con tu movimiento de glúteos más fuerte — rango completo, tempo controlado."
+        },
+        {
+          "name": "Sentadillas Búlgaras",
+          "note": "Trabajo unilateral para estabilidad y desarrollo equilibrado de glúteos."
+        },
+        {
+          "name": "Peso Muerto Rumano",
+          "note": "Enfoque en la cadena posterior — glúteos y femorales con bisagra de cadera."
+        },
+        {
+          "name": "Máquina de Aductores",
+          "note": "Trabajo en la cara interna del muslo para un desarrollo completo."
+        },
+        {
+          "name": "Máquina de Abductores",
+          "note": "Enfoque en glúteos externos — construye anchura y forma."
+        },
+        {
+          "name": "Elevaciones de Pantorrillas",
+          "note": "Completa la sesión con trabajo en la parte inferior de las piernas."
+        }
       ]
     },
     "pullDay": {
       "title": "Día de Jalones",
       "description": "Se enfoca en la espalda, soporte de hombros posteriores, postura y fuerza de tirón en la parte superior del cuerpo. Incluye un circuito de abdominales de 6 minutos.",
       "exercises": [
-        { "name": "Jalón al Pecho", "note": "Tirón vertical — construye anchura de espalda y desarrollo de dorsales." },
-        { "name": "Remos", "note": "Tirón horizontal — grosor y fuerza en la parte media de la espalda." },
-        { "name": "Face Pulls con Cuerda", "note": "Ocasional — soporte de deltoides posteriores y parte superior de la espalda." },
-        { "name": "Circuito de Abdominales 6 Min", "note": "45s trabajo / 15s descanso: Tijeras, Crunches superiores, Elevaciones de piernas y pecho, Crunches oblicuos laterales." }
+        {
+          "name": "Jalón al Pecho",
+          "note": "Tirón vertical — construye anchura de espalda y desarrollo de dorsales."
+        },
+        {
+          "name": "Remos",
+          "note": "Tirón horizontal — grosor y fuerza en la parte media de la espalda."
+        },
+        {
+          "name": "Face Pulls con Cuerda",
+          "note": "Ocasional — soporte de deltoides posteriores y parte superior de la espalda."
+        },
+        {
+          "name": "Circuito de Abdominales 6 Min",
+          "note": "45s trabajo / 15s descanso: Tijeras, Crunches superiores, Elevaciones de piernas y pecho, Crunches oblicuos laterales."
+        }
       ]
     },
     "legsGlutesDay": {
       "title": "Piernas con Enfoque en Glúteos",
       "description": "Todavía involucra glúteos, pero pone más énfasis en el desarrollo general de las piernas. Combina activación de glúteos con trabajo compuesto más pesado.",
       "exercises": [
-        { "name": "Hip Thrusts", "note": "Activación de glúteos antes del trabajo compuesto más pesado." },
-        { "name": "Sentadillas", "note": "Estímulo completo para la parte inferior del cuerpo — la base del día de piernas." },
-        { "name": "Extensiones de Pierna", "note": "Aislamiento de cuádriceps — apriete controlado en la parte superior." },
-        { "name": "Curls de Femorales Acostada", "note": "Aislamiento de femorales para un desarrollo equilibrado de las piernas." },
-        { "name": "Elevaciones de Pantorrillas", "note": "Completa la sesión con trabajo en la parte inferior de las piernas." }
+        {
+          "name": "Hip Thrusts",
+          "note": "Activación de glúteos antes del trabajo compuesto más pesado."
+        },
+        {
+          "name": "Sentadillas",
+          "note": "Estímulo completo para la parte inferior del cuerpo — la base del día de piernas."
+        },
+        {
+          "name": "Extensiones de Pierna",
+          "note": "Aislamiento de cuádriceps — apriete controlado en la parte superior."
+        },
+        {
+          "name": "Curls de Femorales Acostada",
+          "note": "Aislamiento de femorales para un desarrollo equilibrado de las piernas."
+        },
+        {
+          "name": "Elevaciones de Pantorrillas",
+          "note": "Completa la sesión con trabajo en la parte inferior de las piernas."
+        }
       ]
     },
     "pushDay": {
       "title": "Día de Empujes",
       "description": "Enfocado en pecho, hombros y tríceps. Prensa en máquina, aislamiento de pecho y trabajo accesorio de hombros.",
       "exercises": [
-        { "name": "Máquina de Empuje", "note": "Movimiento de prensa principal — enfoque en pecho y deltoides frontales." },
-        { "name": "Máquina de Aperturas", "note": "Aislamiento de pecho — estiramiento y contracción en rango completo." },
-        { "name": "Prensa Inclinada de Pecho", "note": "Cada otro día de empujes — énfasis en la parte superior del pecho." },
-        { "name": "Extensiones de Tríceps", "note": "Desarrollo de brazos y soporte para los empujes." },
-        { "name": "Elevaciones Laterales con Mancuerna", "note": "Anchura de hombros — controlado, sin inercia." },
-        { "name": "Elevaciones Frontales con Mancuerna", "note": "Ocasional — variación de deltoides frontales." }
+        {
+          "name": "Máquina de Empuje",
+          "note": "Movimiento de prensa principal — enfoque en pecho y deltoides frontales."
+        },
+        {
+          "name": "Máquina de Aperturas",
+          "note": "Aislamiento de pecho — estiramiento y contracción en rango completo."
+        },
+        {
+          "name": "Prensa Inclinada de Pecho",
+          "note": "Cada otro día de empujes — énfasis en la parte superior del pecho."
+        },
+        {
+          "name": "Extensiones de Tríceps",
+          "note": "Desarrollo de brazos y soporte para los empujes."
+        },
+        {
+          "name": "Elevaciones Laterales con Mancuerna",
+          "note": "Anchura de hombros — controlado, sin inercia."
+        },
+        {
+          "name": "Elevaciones Frontales con Mancuerna",
+          "note": "Ocasional — variación de deltoides frontales."
+        }
       ]
     },
     "cardio": {
       "heading": "Cardio",
       "subheading": "Cada otro día de entrenamiento, después de levantar. Rota entre estas opciones:",
       "options": [
-        { "name": "StairMaster", "duration": "~20 min", "note": "Ritmo constante, cardio amigable con los glúteos." },
-        { "name": "Carrera de 2 Millas", "duration": "Tu ritmo", "note": "Construye resistencia y disciplina mental." },
-        { "name": "Bicicleta Estacionaria", "duration": "~20 min", "note": "Bajo impacto, esfuerzo constante." }
+        {
+          "name": "StairMaster",
+          "duration": "~20 min",
+          "note": "Ritmo constante, cardio amigable con los glúteos."
+        },
+        {
+          "name": "Carrera de 2 Millas",
+          "duration": "Tu ritmo",
+          "note": "Construye resistencia y disciplina mental."
+        },
+        {
+          "name": "Bicicleta Estacionaria",
+          "duration": "~20 min",
+          "note": "Bajo impacto, esfuerzo constante."
+        }
       ],
       "note": "El cardio es opcional pero consistente — parte de la rutina general, no un castigo."
     },
@@ -149,20 +234,41 @@
     "breakfast": {
       "heading": "Desayuno",
       "description": "Un comienzo fuerte con proteína, carbohidratos ligeros y alimentos nutritivos.",
-      "items": ["2 huevos", "Té", "Fruta", "Hotcakes de proteína"]
+      "items": [
+        "2 huevos",
+        "Té",
+        "Fruta",
+        "Hotcakes de proteína"
+      ]
     },
     "lunch": {
       "heading": "Almuerzo",
       "description": "Centrado en una fuente principal de proteína, un carbohidrato para energía y verduras.",
-      "protein": ["Salmón", "Pollo", "Res"],
-      "carbs": ["Camotes", "Arroz", "Pasta"],
+      "protein": [
+        "Salmón",
+        "Pollo",
+        "Res"
+      ],
+      "carbs": [
+        "Camotes",
+        "Arroz",
+        "Pasta"
+      ],
       "note": "Verduras al lado."
     },
     "dinner": {
       "heading": "Cena",
       "description": "Estructura similar al almuerzo, con porciones ligeramente más pequeñas según el hambre y la actividad.",
-      "protein": ["Salmón", "Pollo", "Res"],
-      "carbs": ["Arroz", "Camotes", "Pasta"],
+      "protein": [
+        "Salmón",
+        "Pollo",
+        "Res"
+      ],
+      "carbs": [
+        "Arroz",
+        "Camotes",
+        "Pasta"
+      ],
       "note": "Porciones ligeramente más pequeñas que el almuerzo."
     },
     "principles": {
@@ -180,10 +286,22 @@
       "heading": "La Recuperación Es Parte del Plan",
       "subheading": "La nutrición sola no es recuperación. Los resultados reales vienen de tomarte el descanso tan en serio como el entrenamiento.",
       "pillars": [
-        { "title": "Nutrición", "body": "La comida es combustible y reparación. Las comidas altas en proteína apoyan el crecimiento muscular y te ayudan a rendir en cada sesión." },
-        { "title": "Jacuzzi", "body": "Recuperación activa. El calor ayuda a relajar los músculos, reducir el dolor y bajar la intensidad después de un entrenamiento intenso." },
-        { "title": "Sueño", "body": "Innegociable. Tu cuerpo se construye durante el descanso — no durante el entrenamiento. Protege tu sueño como si fuera una prioridad de entrenamiento." },
-        { "title": "Agua", "body": "La hidratación afecta todo: rendimiento, recuperación, concentración. Bebe de forma constante a lo largo del día." }
+        {
+          "title": "Nutrición",
+          "body": "La comida es combustible y reparación. Las comidas altas en proteína apoyan el crecimiento muscular y te ayudan a rendir en cada sesión."
+        },
+        {
+          "title": "Jacuzzi",
+          "body": "Recuperación activa. El calor ayuda a relajar los músculos, reducir el dolor y bajar la intensidad después de un entrenamiento intenso."
+        },
+        {
+          "title": "Sueño",
+          "body": "Innegociable. Tu cuerpo se construye durante el descanso — no durante el entrenamiento. Protege tu sueño como si fuera una prioridad de entrenamiento."
+        },
+        {
+          "title": "Agua",
+          "body": "La hidratación afecta todo: rendimiento, recuperación, concentración. Bebe de forma constante a lo largo del día."
+        }
       ]
     }
   },
@@ -234,7 +352,7 @@
   },
   "workWithMe": {
     "pageTitle": "Trabaja Conmigo",
-    "pageDescription": "Asociarse con Kim Montepeque — creadora fitness latina, especialista en glúteos y piernas, 2,204 seguidores en IG.",
+    "pageDescription": "Asociarse con Kimberly Vanessa — creadora fitness latina, especialista en glúteos y piernas, 2,204 seguidores en IG.",
     "heading": "Trabaja Conmigo",
     "subheading": "Contenido auténtico. Audiencia real. Resultados serios.",
     "stats": {
@@ -245,19 +363,33 @@
       "location": "Los Ángeles, CA",
       "locationLabel": "Ubicación",
       "audience": "Mujeres 18–35",
-      "audienceLabel": "Audiencia Principal"
+      "audienceLabel": "Audiencia Principal",
+      "tiktokFollowers": "33K",
+      "tiktokFollowersLabel": "Seguidores en TikTok"
     },
     "about": {
       "heading": "Sobre Kim",
-      "body": "Kim Montepeque es una creadora fitness latina radicada en Los Ángeles, CA. Se especializa en el entrenamiento de glúteos y piernas y ha documentado su camino de fuerza desde 2018. Su audiencia son mujeres de 18 a 35 años que se toman en serio la construcción de fuerza y buscan contenido real y cercano — sin filtros ni modas."
+      "body": "Kimberly Vanessa es una creadora fitness latina radicada en Los Ángeles, CA. Se especializa en el entrenamiento de glúteos y piernas y ha documentado su camino de fuerza desde 2018. Su audiencia son mujeres de 18 a 35 años que se toman en serio la construcción de fuerza y buscan contenido real y cercano — sin filtros ni modas."
     },
     "contentTypes": {
       "heading": "Contenido Que Crea",
       "items": [
-        { "type": "Videos de Entrenamiento", "description": "Demostraciones de ejercicios, sesiones de entrenamiento completas y desglose de técnicas." },
-        { "type": "Contenido de Transformación", "description": "Actualizaciones de progreso, comparaciones y narrativa honesta del recorrido." },
-        { "type": "Nutrición y Estilo de Vida", "description": "Preparación de comidas, rutinas diarias y contenido de hábitos sostenibles." },
-        { "type": "Presentación de Productos", "description": "Ropa deportiva, suplementos y equipos que realmente usa." }
+        {
+          "type": "Videos de Entrenamiento",
+          "description": "Demostraciones de ejercicios, sesiones de entrenamiento completas y desglose de técnicas."
+        },
+        {
+          "type": "Contenido de Transformación",
+          "description": "Actualizaciones de progreso, comparaciones y narrativa honesta del recorrido."
+        },
+        {
+          "type": "Nutrición y Estilo de Vida",
+          "description": "Preparación de comidas, rutinas diarias y contenido de hábitos sostenibles."
+        },
+        {
+          "type": "Presentación de Productos",
+          "description": "Ropa deportiva, suplementos y equipos que realmente usa."
+        }
       ]
     },
     "inquiry": {
@@ -289,24 +421,24 @@
   },
   "meta": {
     "home": {
-      "title": "Kim Montepeque — Creadora Fitness y Especialista en Glúteos",
+      "title": "Kimberly Vanessa — Creadora Fitness y Especialista en Glúteos",
       "description": "Creadora fitness latina radicada en Los Ángeles. Especialista en glúteos y piernas. Entrenamiento real, resultados reales. Sigue el camino en Instagram @kim.montepeque."
     },
     "workouts": {
-      "title": "Mi División de Entrenamiento — Kim Montepeque",
+      "title": "Mi División de Entrenamiento — Kimberly Vanessa",
       "description": "La división de entrenamiento completa de Kim: glúteos, jalones, piernas, empujes y cardio. Construida para resultados reales, no para atajos."
     },
     "diet": {
-      "title": "Mi Dieta y Nutrición — Kim Montepeque",
+      "title": "Mi Dieta y Nutrición — Kimberly Vanessa",
       "description": "La estructura de nutrición diaria de Kim — comidas altas en proteína, principios de recuperación y hábitos sostenibles."
     },
     "startOver": {
-      "title": "Lo Que Haría Si Empezara de Cero — Kim Montepeque",
+      "title": "Lo Que Haría Si Empezara de Cero — Kimberly Vanessa",
       "description": "El consejo honesto de Kim para principiantes. Qué cambiaría, qué aprendió y qué funciona de verdad."
     },
     "workWithMe": {
-      "title": "Trabaja Conmigo — Kim Montepeque",
-      "description": "Asociarse con Kim Montepeque. Creadora fitness latina, 2,204 seguidores en Instagram, especialista en glúteos y piernas."
+      "title": "Trabaja Conmigo — Kimberly Vanessa",
+      "description": "Asociarse con Kimberly Vanessa. Creadora fitness latina, 2,204 seguidores en Instagram, especialista en glúteos y piernas."
     }
   }
 }

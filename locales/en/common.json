@@ -8,7 +8,7 @@
     "toggleLang": "ES"
   },
   "hero": {
-    "name": "Kim Montepeque",
+    "name": "Kimberly Vanessa",
     "tagline": "Built different. Entrenada con propósito.",
     "followInstagram": "Follow on Instagram",
     "workWithMe": "Work With Me"
@@ -35,9 +35,18 @@
       "body": "Women 18–35 who are done with generic content and want real, relatable fitness — strength-focused, no filters, no fads. If you're ready to build something lasting, you're in the right place."
     },
     "pillars": [
-      { "title": "Glutes & Legs", "description": "The foundation of her training. Hip thrusts, Bulgarian splits, RDLs — built for results." },
-      { "title": "Progressive Overload", "description": "Track your lifts. Beat your last set. Compete with yesterday's you." },
-      { "title": "Real Content", "description": "No filters, no fads. Just consistent effort and honest results." }
+      {
+        "title": "Glutes & Legs",
+        "description": "The foundation of her training. Hip thrusts, Bulgarian splits, RDLs — built for results."
+      },
+      {
+        "title": "Progressive Overload",
+        "description": "Track your lifts. Beat your last set. Compete with yesterday's you."
+      },
+      {
+        "title": "Real Content",
+        "description": "No filters, no fads. Just consistent effort and honest results."
+      }
     ]
   },
   "instagram": {
@@ -51,6 +60,7 @@
     "label": "TikTok",
     "heading": "Watch the Videos",
     "subheading": "Training clips, tips, and real gym content.",
+    "followerCount": "33K followers",
     "cta": "Follow on TikTok"
   },
   "emailSignup": {
@@ -66,7 +76,7 @@
     "contact": "kimberlyvanessagym@gmail.com",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "rights": "© 2025 Kim Montepeque. All rights reserved."
+    "rights": "© 2025 Kimberly Vanessa. All rights reserved."
   },
   "workouts": {
     "pageTitle": "My Workouts",
@@ -85,54 +95,129 @@
       "title": "Glute Day",
       "description": "Focused on glute development, lower-body strength, and shaping. Starts with the strongest glute-dominant movement and progresses through unilateral work, hinge patterns, and accessory movements.",
       "exercises": [
-        { "name": "Hip Thrusts", "note": "Lead with your strongest glute movement — full range, controlled tempo." },
-        { "name": "Bulgarian Split Squats", "note": "Unilateral work for stability and balanced glute development." },
-        { "name": "Romanian Deadlifts", "note": "Posterior chain focus — glutes and hamstrings with hip hinge." },
-        { "name": "Adductor Machine", "note": "Inner thigh targeting for complete lower-body development." },
-        { "name": "Abductor Machine", "note": "Outer glute focus — builds width and shape." },
-        { "name": "Calf Raises", "note": "Round out the session with lower leg work." }
+        {
+          "name": "Hip Thrusts",
+          "note": "Lead with your strongest glute movement — full range, controlled tempo."
+        },
+        {
+          "name": "Bulgarian Split Squats",
+          "note": "Unilateral work for stability and balanced glute development."
+        },
+        {
+          "name": "Romanian Deadlifts",
+          "note": "Posterior chain focus — glutes and hamstrings with hip hinge."
+        },
+        {
+          "name": "Adductor Machine",
+          "note": "Inner thigh targeting for complete lower-body development."
+        },
+        {
+          "name": "Abductor Machine",
+          "note": "Outer glute focus — builds width and shape."
+        },
+        {
+          "name": "Calf Raises",
+          "note": "Round out the session with lower leg work."
+        }
       ]
     },
     "pullDay": {
       "title": "Pull Day",
       "description": "Focuses on the back, rear shoulder support, posture, and upper-body pulling strength. Includes a 6-minute ab circuit.",
       "exercises": [
-        { "name": "Lat Pulldowns", "note": "Vertical pulling — builds back width and lat development." },
-        { "name": "Rows", "note": "Horizontal pulling — thickness and mid-back strength." },
-        { "name": "Face Pulls with Rope", "note": "Occasional — rear delts and upper back support." },
-        { "name": "6-Minute Ab Circuit", "note": "45s on / 15s off: Scissors, Upper Ab Crunches, Leg & Chest Lifts, Side Oblique Crunches." }
+        {
+          "name": "Lat Pulldowns",
+          "note": "Vertical pulling — builds back width and lat development."
+        },
+        {
+          "name": "Rows",
+          "note": "Horizontal pulling — thickness and mid-back strength."
+        },
+        {
+          "name": "Face Pulls with Rope",
+          "note": "Occasional — rear delts and upper back support."
+        },
+        {
+          "name": "6-Minute Ab Circuit",
+          "note": "45s on / 15s off: Scissors, Upper Ab Crunches, Leg & Chest Lifts, Side Oblique Crunches."
+        }
       ]
     },
     "legsGlutesDay": {
       "title": "Legs with Glute Focus",
       "description": "Still glute-involved, but places more emphasis on overall leg development. Combines glute activation with heavier compound leg work.",
       "exercises": [
-        { "name": "Hip Thrusts", "note": "Glute activation before heavier compound work." },
-        { "name": "Squats", "note": "Full lower-body stimulus — the foundation of leg day." },
-        { "name": "Leg Extensions", "note": "Quad isolation — controlled squeeze at the top." },
-        { "name": "Lying Hamstring Curls", "note": "Hamstring isolation for balanced leg development." },
-        { "name": "Calf Raises", "note": "Complete the session with lower leg work." }
+        {
+          "name": "Hip Thrusts",
+          "note": "Glute activation before heavier compound work."
+        },
+        {
+          "name": "Squats",
+          "note": "Full lower-body stimulus — the foundation of leg day."
+        },
+        {
+          "name": "Leg Extensions",
+          "note": "Quad isolation — controlled squeeze at the top."
+        },
+        {
+          "name": "Lying Hamstring Curls",
+          "note": "Hamstring isolation for balanced leg development."
+        },
+        {
+          "name": "Calf Raises",
+          "note": "Complete the session with lower leg work."
+        }
       ]
     },
     "pushDay": {
       "title": "Push Day",
       "description": "Focused on chest, shoulders, and triceps. Machine-based pressing, chest isolation, and shoulder accessory work.",
       "exercises": [
-        { "name": "Push Machine", "note": "Primary pressing movement — chest and front delt focus." },
-        { "name": "Fly Machine", "note": "Chest isolation — stretch and squeeze through full range." },
-        { "name": "Incline Chest Press", "note": "Every other push day — upper chest emphasis." },
-        { "name": "Tricep Pushdowns", "note": "Arm development and pressing support." },
-        { "name": "Dumbbell Lateral Raises", "note": "Shoulder width — controlled, no momentum." },
-        { "name": "Dumbbell Front Raises", "note": "Occasional — front delt variation." }
+        {
+          "name": "Push Machine",
+          "note": "Primary pressing movement — chest and front delt focus."
+        },
+        {
+          "name": "Fly Machine",
+          "note": "Chest isolation — stretch and squeeze through full range."
+        },
+        {
+          "name": "Incline Chest Press",
+          "note": "Every other push day — upper chest emphasis."
+        },
+        {
+          "name": "Tricep Pushdowns",
+          "note": "Arm development and pressing support."
+        },
+        {
+          "name": "Dumbbell Lateral Raises",
+          "note": "Shoulder width — controlled, no momentum."
+        },
+        {
+          "name": "Dumbbell Front Raises",
+          "note": "Occasional — front delt variation."
+        }
       ]
     },
     "cardio": {
       "heading": "Cardio",
       "subheading": "Every other training day, after lifting. Rotate through these options:",
       "options": [
-        { "name": "StairMaster", "duration": "~20 min", "note": "Steady pace, glute-friendly cardio." },
-        { "name": "2-Mile Run", "duration": "Your pace", "note": "Build endurance and mental discipline." },
-        { "name": "Stationary Bike", "duration": "~20 min", "note": "Low-impact, consistent effort." }
+        {
+          "name": "StairMaster",
+          "duration": "~20 min",
+          "note": "Steady pace, glute-friendly cardio."
+        },
+        {
+          "name": "2-Mile Run",
+          "duration": "Your pace",
+          "note": "Build endurance and mental discipline."
+        },
+        {
+          "name": "Stationary Bike",
+          "duration": "~20 min",
+          "note": "Low-impact, consistent effort."
+        }
       ],
       "note": "Cardio is optional but consistent — part of the overall routine, not a punishment."
     },
@@ -149,20 +234,41 @@
     "breakfast": {
       "heading": "Breakfast",
       "description": "A strong start with protein, light carbohydrates, and nutrient-dense foods.",
-      "items": ["2 eggs", "Tea", "Fruit", "Protein pancakes"]
+      "items": [
+        "2 eggs",
+        "Tea",
+        "Fruit",
+        "Protein pancakes"
+      ]
     },
     "lunch": {
       "heading": "Lunch",
       "description": "Centered around a primary protein source, a carbohydrate for energy, and vegetables.",
-      "protein": ["Salmon", "Chicken", "Beef"],
-      "carbs": ["Sweet potatoes", "Rice", "Pasta"],
+      "protein": [
+        "Salmon",
+        "Chicken",
+        "Beef"
+      ],
+      "carbs": [
+        "Sweet potatoes",
+        "Rice",
+        "Pasta"
+      ],
       "note": "Vegetables on the side."
     },
     "dinner": {
       "heading": "Dinner",
       "description": "Similar structure to lunch, slightly smaller portions depending on hunger and activity.",
-      "protein": ["Salmon", "Chicken", "Beef"],
-      "carbs": ["Rice", "Sweet potatoes", "Pasta"],
+      "protein": [
+        "Salmon",
+        "Chicken",
+        "Beef"
+      ],
+      "carbs": [
+        "Rice",
+        "Sweet potatoes",
+        "Pasta"
+      ],
       "note": "Slightly smaller portions than lunch."
     },
     "principles": {
@@ -180,10 +286,22 @@
       "heading": "Recovery Is Part of the Plan",
       "subheading": "Nutrition alone isn't recovery. Real results come from treating rest as seriously as training.",
       "pillars": [
-        { "title": "Nutrition", "body": "Food is fuel and repair. High-protein meals support muscle growth and help you show up strong every session." },
-        { "title": "Jacuzzi", "body": "Active recovery. Heat helps relax muscles, reduce soreness, and bring the body back down after intense training." },
-        { "title": "Sleep", "body": "Non-negotiable. Your body builds during rest — not during the workout. Protect your sleep like a training priority." },
-        { "title": "Water", "body": "Hydration affects everything: performance, recovery, focus. Drink consistently throughout the day." }
+        {
+          "title": "Nutrition",
+          "body": "Food is fuel and repair. High-protein meals support muscle growth and help you show up strong every session."
+        },
+        {
+          "title": "Jacuzzi",
+          "body": "Active recovery. Heat helps relax muscles, reduce soreness, and bring the body back down after intense training."
+        },
+        {
+          "title": "Sleep",
+          "body": "Non-negotiable. Your body builds during rest — not during the workout. Protect your sleep like a training priority."
+        },
+        {
+          "title": "Water",
+          "body": "Hydration affects everything: performance, recovery, focus. Drink consistently throughout the day."
+        }
       ]
     }
   },
@@ -234,7 +352,7 @@
   },
   "workWithMe": {
     "pageTitle": "Work With Me",
-    "pageDescription": "Partner with Kim Montepeque — Latina fitness creator, glutes & legs specialist, 2,204 IG followers.",
+    "pageDescription": "Partner with Kimberly Vanessa — Latina fitness creator, glutes & legs specialist, 2,204 IG followers.",
     "heading": "Work With Me",
     "subheading": "Authentic content. Real audience. Serious results.",
     "stats": {
@@ -245,19 +363,33 @@
       "location": "Los Angeles, CA",
       "locationLabel": "Based In",
       "audience": "Women 18–35",
-      "audienceLabel": "Core Audience"
+      "audienceLabel": "Core Audience",
+      "tiktokFollowers": "33K",
+      "tiktokFollowersLabel": "TikTok Followers"
     },
     "about": {
       "heading": "About Kim",
-      "body": "Kim Montepeque is a Latina fitness creator based in Los Angeles, CA. She specializes in glute and leg training and has been documenting her strength journey since 2018. Her audience is women 18–35 who are serious about building strength and looking for real, relatable content — not filters and fads."
+      "body": "Kimberly Vanessa is a Latina fitness creator based in Los Angeles, CA. She specializes in glute and leg training and has been documenting her strength journey since 2018. With 2,204 Instagram followers and 33K on TikTok, Her audience is women 18–35 who are serious about building strength and looking for real, relatable content — not filters and fads."
     },
     "contentTypes": {
       "heading": "Content She Creates",
       "items": [
-        { "type": "Workout Videos", "description": "Exercise demos, full training sessions, and technique breakdowns." },
-        { "type": "Transformation Content", "description": "Progress updates, before/after comparisons, and honest journey storytelling." },
-        { "type": "Nutrition & Lifestyle", "description": "Meal prep, daily routines, and sustainable habit content." },
-        { "type": "Product Features", "description": "Gym wear, supplements, and equipment she actually uses." }
+        {
+          "type": "Workout Videos",
+          "description": "Exercise demos, full training sessions, and technique breakdowns."
+        },
+        {
+          "type": "Transformation Content",
+          "description": "Progress updates, before/after comparisons, and honest journey storytelling."
+        },
+        {
+          "type": "Nutrition & Lifestyle",
+          "description": "Meal prep, daily routines, and sustainable habit content."
+        },
+        {
+          "type": "Product Features",
+          "description": "Gym wear, supplements, and equipment she actually uses."
+        }
       ]
     },
     "inquiry": {
@@ -289,24 +421,24 @@
   },
   "meta": {
     "home": {
-      "title": "Kim Montepeque — Fitness Creator & Glutes Specialist",
+      "title": "Kimberly Vanessa — Fitness Creator & Glutes Specialist",
       "description": "LA-based Latina fitness creator. Glutes & legs specialist. Real training, real results. Follow the journey on Instagram @kim.montepeque."
     },
     "workouts": {
-      "title": "My Training Split — Kim Montepeque",
+      "title": "My Training Split — Kimberly Vanessa",
       "description": "Kim's full workout split: glutes, pull, legs, push, and cardio. Built for real results, not shortcuts."
     },
     "diet": {
-      "title": "My Diet & Nutrition — Kim Montepeque",
+      "title": "My Diet & Nutrition — Kimberly Vanessa",
       "description": "Kim's daily nutrition structure — high-protein meals, recovery principles, and sustainable habits."
     },
     "startOver": {
-      "title": "What I'd Do If I Started Over — Kim Montepeque",
+      "title": "What I'd Do If I Started Over — Kimberly Vanessa",
       "description": "Kim's honest advice for fitness beginners. What she'd change, what she learned, and what actually works."
     },
     "workWithMe": {
-      "title": "Work With Me — Kim Montepeque",
-      "description": "Partner with Kim Montepeque. Latina fitness creator, 2,204 Instagram followers, glutes & legs specialist."
+      "title": "Work With Me — Kimberly Vanessa",
+      "description": "Partner with Kimberly Vanessa. Latina fitness creator, 2,204 Instagram followers, glutes & legs specialist."
     }
   }
 }
