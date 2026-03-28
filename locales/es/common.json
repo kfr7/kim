@@ -405,14 +405,66 @@
     }
   },
   "privacy": {
-    "pageTitle": "Política de Privacidad",
+    "pageTitle": "Política de Privacidad — Kimberly Vanessa",
     "heading": "Política de Privacidad",
-    "lastUpdated": "Última actualización: marzo de 2025"
+    "lastUpdated": "Última actualización: marzo 2026",
+    "sections": [
+      {
+        "heading": "Información que Recopilamos",
+        "body": "Recopilamos la información que proporcionas voluntariamente, como tu correo electrónico al suscribirte a nuestro boletín. También podemos recopilar datos básicos de análisis (páginas visitadas, duración de la sesión) a través de Google Analytics."
+      },
+      {
+        "heading": "Cómo Usamos tu Información",
+        "body": "Tu correo electrónico se utiliza únicamente para enviarte boletines y contenido de fitness de Kimberly Vanessa. No vendemos ni compartimos tu información personal con terceros con fines de marketing."
+      },
+      {
+        "heading": "Cookies",
+        "body": "Este sitio usa una cookie de preferencia de idioma para recordar tu elección. También usamos cookies de Google Analytics para el análisis del uso del sitio. Puedes desactivar las cookies en la configuración de tu navegador."
+      },
+      {
+        "heading": "Servicios de Terceros",
+        "body": "Usamos Google Analytics para el análisis. Su política de privacidad aplica a los datos recopilados por su servicio. Usamos Resend para gestionar las suscripciones de correo electrónico."
+      },
+      {
+        "heading": "Tus Derechos",
+        "body": "Puedes cancelar tu suscripción al boletín en cualquier momento a través del enlace en cualquier correo electrónico. Para solicitar la eliminación de tus datos, contáctanos en kimberlyvanessagym@gmail.com."
+      },
+      {
+        "heading": "Contacto",
+        "body": "Para preguntas relacionadas con la privacidad, escribe a kimberlyvanessagym@gmail.com."
+      }
+    ]
   },
   "terms": {
-    "pageTitle": "Términos de Servicio",
+    "pageTitle": "Términos de Servicio — Kimberly Vanessa",
     "heading": "Términos de Servicio",
-    "lastUpdated": "Última actualización: marzo de 2025"
+    "lastUpdated": "Última actualización: marzo 2026",
+    "sections": [
+      {
+        "heading": "Aceptación de los Términos",
+        "body": "Al acceder a kimberlyvanessa.com, aceptas estos Términos de Servicio. Si no estás de acuerdo, por favor no uses este sitio."
+      },
+      {
+        "heading": "Contenido",
+        "body": "Todo el contenido de este sitio — incluyendo planes de entrenamiento, información nutricional, fotos y contenido escrito — es solo para fines informativos. No constituye asesoramiento médico ni de fitness profesional. Consulta a un profesional calificado antes de comenzar cualquier programa de fitness o nutrición."
+      },
+      {
+        "heading": "Propiedad Intelectual",
+        "body": "Todo el contenido, imágenes y marca de este sitio son propiedad de Kimberly Vanessa. No puedes reproducirlos, distribuirlos ni utilizarlos sin permiso escrito explícito."
+      },
+      {
+        "heading": "Limitación de Responsabilidad",
+        "body": "Kimberly Vanessa no es responsable de lesiones, pérdidas o daños derivados del uso de la información en este sitio. Usa todo el contenido de fitness y nutrición bajo tu propio riesgo."
+      },
+      {
+        "heading": "Cambios",
+        "body": "Nos reservamos el derecho de actualizar estos términos en cualquier momento. El uso continuado del sitio después de los cambios constituye la aceptación de los términos actualizados."
+      },
+      {
+        "heading": "Contacto",
+        "body": "¿Preguntas sobre estos términos? Escribe a kimberlyvanessagym@gmail.com."
+      }
+    ]
   },
   "notFound": {
     "heading": "Parece que esta página se saltó el día de piernas.",

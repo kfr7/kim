@@ -20,15 +20,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Kim Montepeque — Fitness Creator & Glutes Specialist',
-    template: '%s | Kim Montepeque',
+    default: 'Kimberly Vanessa — Fitness Creator & Glutes Specialist',
+    template: '%s | Kimberly Vanessa',
   },
   description: 'LA-based Latina fitness creator. Glutes & legs specialist. Real training, real results.',
   metadataBase: new URL('https://kimberlyvanessa.com'),
   openGraph: {
-    siteName: 'Kim Montepeque',
+    siteName: 'Kimberly Vanessa',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Kim Montepeque' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
   },
   twitter: {
     card: 'summary_large_image',

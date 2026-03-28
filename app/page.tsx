@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: t('title'),
       description: t('description'),
-      images: [{ url: '/photos/kim-hero-back-dfyne.jpg', width: 1200, height: 630, alt: 'Kim Montepeque' }],
+      images: [{ url: '/photos/kim-hero-back-dfyne.jpg', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
     },
   };
 }
@@ -34,7 +34,7 @@ export default async function HomePage() {
       <section className="relative min-h-[100svh] flex items-end overflow-hidden">
         <Image
           src="/photos/kim-hero-back-dfyne.jpg"
-          alt="Kim Montepeque — hero"
+          alt="Kimberly Vanessa — hero"
           fill
           priority
           className="object-cover object-center"
@@ -138,7 +138,7 @@ export default async function HomePage() {
               >
                 <Image
                   src={src}
-                  alt={`Kim Montepeque Instagram post ${i + 1}`}
+                  alt={`Kimberly Vanessa Instagram post ${i + 1}`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -178,7 +178,7 @@ export default async function HomePage() {
                 className="absolute inset-0 w-full h-full rounded-2xl"
                 allowFullScreen
                 allow="encrypted-media"
-                title="Kim Montepeque TikTok"
+                title="Kimberly Vanessa TikTok"
               />
             </div>
           </div>

@@ -405,14 +405,66 @@
     }
   },
   "privacy": {
-    "pageTitle": "Privacy Policy",
+    "pageTitle": "Privacy Policy — Kimberly Vanessa",
     "heading": "Privacy Policy",
-    "lastUpdated": "Last updated: March 2025"
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "heading": "Information We Collect",
+        "body": "We collect information you voluntarily provide, such as your email address when you sign up for our newsletter. We may also collect basic analytics data (pages visited, session duration) through Google Analytics."
+      },
+      {
+        "heading": "How We Use Your Information",
+        "body": "Your email address is used solely to send you newsletters and fitness content from Kimberly Vanessa. We do not sell or share your personal information with third parties for marketing purposes."
+      },
+      {
+        "heading": "Cookies",
+        "body": "This site uses a language preference cookie to remember your language choice. We also use Google Analytics cookies for site usage analysis. You can disable cookies in your browser settings."
+      },
+      {
+        "heading": "Third-Party Services",
+        "body": "We use Google Analytics for analytics. Their privacy policy applies to data collected by their service. We use Resend to manage email subscriptions."
+      },
+      {
+        "heading": "Your Rights",
+        "body": "You may unsubscribe from our newsletter at any time via the link in any email. To request deletion of your data, contact us at kimberlyvanessagym@gmail.com."
+      },
+      {
+        "heading": "Contact",
+        "body": "For privacy-related questions, email kimberlyvanessagym@gmail.com."
+      }
+    ]
   },
   "terms": {
-    "pageTitle": "Terms of Service",
+    "pageTitle": "Terms of Service — Kimberly Vanessa",
     "heading": "Terms of Service",
-    "lastUpdated": "Last updated: March 2025"
+    "lastUpdated": "Last updated: March 2026",
+    "sections": [
+      {
+        "heading": "Acceptance of Terms",
+        "body": "By accessing kimberlyvanessa.com, you agree to these Terms of Service. If you do not agree, please do not use this site."
+      },
+      {
+        "heading": "Content",
+        "body": "All content on this site — including workout plans, nutrition information, photos, and written content — is for informational purposes only. It is not medical or professional fitness advice. Consult a qualified professional before starting any fitness or nutrition program."
+      },
+      {
+        "heading": "Intellectual Property",
+        "body": "All content, images, and branding on this site are the property of Kimberly Vanessa. You may not reproduce, distribute, or use them without explicit written permission."
+      },
+      {
+        "heading": "Limitation of Liability",
+        "body": "Kimberly Vanessa is not liable for any injuries, losses, or damages resulting from use of information on this site. Use all fitness and nutrition content at your own risk."
+      },
+      {
+        "heading": "Changes",
+        "body": "We reserve the right to update these terms at any time. Continued use of the site after changes constitutes acceptance of the updated terms."
+      },
+      {
+        "heading": "Contact",
+        "body": "Questions about these terms? Email kimberlyvanessagym@gmail.com."
+      }
+    ]
   },
   "notFound": {
     "heading": "Looks like this page skipped leg day.",

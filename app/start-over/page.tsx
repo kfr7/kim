@@ -22,7 +22,7 @@ export default async function StartOverPage() {
       <div className="relative w-full max-w-sm mx-auto aspect-[3/4] rounded-2xl overflow-hidden mb-12">
         <Image
           src="/photos/kim-2018-beginning.jpg"
-          alt="Kim Montepeque — 2018 beginning"
+          alt="Kimberly Vanessa — 2018 beginning"
           fill
           className="object-cover object-top"
           sizes="(max-width: 640px) 100vw, 384px"
