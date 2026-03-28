@@ -17,11 +17,17 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+const TIKTOK_VIDEO_IDS = [
+  '7500278697501527338',
+  '7466543043898920235',
+  '7615001525147979038',
+];
+
 export default async function HomePage() {
   const tHero = await getTranslations('hero');
-  const tStory = await getTranslations('story');
   const tNiche = await getTranslations('niche');
   const tIg = await getTranslations('instagram');
+  const tTiktok = await getTranslations('tiktok');
   const tEmail = await getTranslations('emailSignup');
 
   const pillars = tNiche.raw('pillars') as Array<{ title: string; description: string }>;
@@ -71,58 +77,6 @@ export default async function HomePage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* ─── HER STORY ─── */}
-        <section className="py-24" id="story">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
-            {tStory('label')}
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-12 max-w-2xl">
-            {tStory('heading')}
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* 2018 photo */}
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-              <Image
-                src="/photos/kim-2018-beginning.jpg"
-                alt="Kim Montepeque — 2018 beginning"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm rounded-lg px-3 py-1.5">
-                <p className="text-xs font-semibold tracking-wider uppercase text-accent">
-                  {tStory('beginningLabel')}
-                </p>
-              </div>
-            </div>
-
-            {/* Recent photo */}
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-              <Image
-                src="/photos/kim-locker-room-glutes-teal.jpg"
-                alt="Kim Montepeque — now"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm rounded-lg px-3 py-1.5">
-                <p className="text-xs font-semibold tracking-wider uppercase text-accent">
-                  {tStory('nowLabel')}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Story text */}
-          <div className="max-w-2xl space-y-4">
-            <p className="text-text-primary text-lg leading-relaxed">{tStory('body1')}</p>
-            <p className="text-text-secondary leading-relaxed">{tStory('body2')}</p>
-            <p className="text-text-secondary leading-relaxed">{tStory('body3')}</p>
-            <p className="text-accent font-semibold font-serif italic text-lg">{tStory('cta')}</p>
-          </div>
-        </section>
 
         {/* ─── WHAT SHE DOES ─── */}
         <section className="py-24 border-t border-zinc-800/50" id="what-she-does">
@@ -206,6 +160,42 @@ export default async function HomePage() {
               className="inline-flex items-center gap-2 px-8 py-3 border border-zinc-600 hover:border-accent hover:text-accent text-text-primary font-semibold rounded-lg transition-colors duration-200"
             >
               {tIg('cta')} — {tIg('subheading')}
+            </a>
+          </div>
+        </section>
+
+        {/* ─── TIKTOK ─── */}
+        <section className="py-24 border-t border-zinc-800/50" id="tiktok">
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+            {tTiktok('label')}
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-2">
+            {tTiktok('heading')}
+          </h2>
+          <p className="text-text-secondary mb-10">{tTiktok('subheading')}</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TIKTOK_VIDEO_IDS.map((id) => (
+              <div key={id} className="relative w-full" style={{ paddingBottom: '177.78%' }}>
+                <iframe
+                  src={`https://www.tiktok.com/embed/v2/${id}`}
+                  className="absolute inset-0 w-full h-full rounded-2xl"
+                  allowFullScreen
+                  allow="encrypted-media"
+                  title={`TikTok video ${id}`}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href="https://www.tiktok.com/@kim.montepeque"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3 border border-zinc-600 hover:border-accent hover:text-accent text-text-primary font-semibold rounded-lg transition-colors duration-200"
+            >
+              {tTiktok('cta')} — @kim.montepeque
             </a>
           </div>
         </section>

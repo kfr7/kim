@@ -47,6 +47,12 @@
     "cta": "Ver en Instagram",
     "followerCount": "2,204 seguidores"
   },
+  "tiktok": {
+    "label": "TikTok",
+    "heading": "Mira los Videos",
+    "subheading": "Clips de entrenamiento, tips y contenido real del gym.",
+    "cta": "Seguir en TikTok"
+  },
   "emailSignup": {
     "heading": "Únete al Recorrido",
     "subheading": "Entrenamientos, tips de nutrición y pláticas reales — directo a tu correo.",

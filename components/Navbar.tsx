@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { LanguageToggle } from './LanguageToggle';
+import { MobileNav } from './MobileNav';
 
 export async function Navbar() {
   const t = await getTranslations('nav');
@@ -43,9 +44,10 @@ export async function Navbar() {
             ))}
           </nav>
 
-          {/* Right: lang toggle */}
+          {/* Right: lang toggle + mobile hamburger */}
           <div className="flex items-center gap-3">
             <LanguageToggle currentLocale={locale} label={t('toggleLang')} />
+            <MobileNav links={links} />
           </div>
         </div>
       </div>
