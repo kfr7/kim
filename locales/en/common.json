@@ -13,8 +13,14 @@
     "followInstagram": "Follow on Instagram",
     "workWithMe": "Work With Me"
   },
+  "mobileHub": {
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "workouts": "My Workouts",
+    "workWithMe": "Work With Me"
+  },
   "story": {
-    "label": "Her Story",
+    "label": "My Story",
     "heading": "From the beginning. Every rep. Still going.",
     "beginningLabel": "2018 — The Beginning",
     "nowLabel": "Now",
@@ -24,7 +30,7 @@
     "cta": "Follow along. Let's build."
   },
   "niche": {
-    "label": "What She Does",
+    "label": "What I Do",
     "heading": "Glutes & Legs Specialist",
     "philosophy": {
       "heading": "Training Philosophy",
@@ -37,7 +43,7 @@
     "pillars": [
       {
         "title": "Glutes & Legs",
-        "description": "The foundation of her training. Hip thrusts, Bulgarian splits, RDLs — built for results."
+        "description": "The foundation of my training. Hip thrusts, Bulgarian splits, RDLs — built for results."
       },
       {
         "title": "Progressive Overload",
@@ -64,8 +70,8 @@
     "cta": "Follow on TikTok"
   },
   "emailSignup": {
-    "heading": "Join the Journey",
-    "subheading": "Workouts, nutrition tips, and real talk — straight to your inbox.",
+    "heading": "Get my weekly workouts + what I'm actually eating",
+    "subheading": "Real training, real food, no fluff — straight to your inbox.",
     "placeholder": "your@email.com",
     "cta": "Join",
     "successMessage": "You're in! Check your inbox.",
@@ -336,6 +342,15 @@
         "body": "Most importantly, I would be more patient. Real progress takes time. Strength, confidence, body composition, and visible development all come from repeated effort over weeks and months — not from trying to rush the process."
       }
     ],
+    "timeline": [
+      { "year": "2018", "label": "Started with zero experience" },
+      { "year": "2019", "label": "First year staying consistent" },
+      { "year": "2020", "label": "Visible progress, growing confidence" },
+      { "year": "2021–2022", "label": "Developed glute & leg training focus" },
+      { "year": "2023", "label": "Built a real community" },
+      { "year": "2024–Now", "label": "Coaching, brand, full system" }
+    ],
+    "timelineHeading": "The Journey",
     "priorities": {
       "heading": "If I Were Starting Over, My Priorities Would Be:",
       "items": [
@@ -368,8 +383,8 @@
       "tiktokFollowersLabel": "TikTok Followers"
     },
     "about": {
-      "heading": "About Kim",
-      "body": "Kimberly Vanessa is a Latina fitness creator based in Los Angeles, CA. She specializes in glute and leg training and has been documenting her strength journey since 2018. With 2,204 Instagram followers and 33K on TikTok, Her audience is women 18–35 who are serious about building strength and looking for real, relatable content — not filters and fads."
+      "heading": "About Me",
+      "body": "I'm a Latina fitness creator based in Los Angeles, CA. I specialize in glute and leg training and have been documenting my strength journey since 2018. With 2,204 Instagram followers and 33K on TikTok, my audience is women 18–35 who are serious about building strength and looking for real, relatable content — not filters and fads."
     },
     "contentTypes": {
       "heading": "Content She Creates",
@@ -389,6 +404,27 @@
         {
           "type": "Product Features",
           "description": "Gym wear, supplements, and equipment she actually uses."
+        }
+      ]
+    },
+    "whatIBring": {
+      "heading": "What I Bring",
+      "items": [
+        {
+          "title": "Authentic Audience",
+          "description": "My followers are real — not inflated. Women who follow me are genuinely invested in fitness and ready to act on recommendations."
+        },
+        {
+          "title": "Consistent Posting",
+          "description": "I post regularly across Instagram and TikTok. Consistent presence means consistent exposure for your brand."
+        },
+        {
+          "title": "High-Intent Niche",
+          "description": "Glutes & legs is a high-purchase-intent niche. My audience actively buys gym wear, supplements, and equipment."
+        },
+        {
+          "title": "Bilingual Creator",
+          "description": "I create content in both English and Spanish — reaching a broader Latina and U.S. Hispanic audience."
         }
       ]
     },

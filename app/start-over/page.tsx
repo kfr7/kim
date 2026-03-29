@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { StartOverTimeline } from '@/components/StartOverTimeline';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('meta.startOver');
@@ -15,9 +16,21 @@ export default async function StartOverPage() {
   const t = await getTranslations('startOver');
   const sections = t.raw('sections') as Array<{ heading: string; body: string }>;
   const priorities = t.raw('priorities.items') as string[];
+  const timeline = t.raw('timeline') as Array<{ year: string; label: string }>;
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Advice</p>
+      <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-12 leading-tight">
+        {t('heading')}
+      </h1>
+
+      {/* ─── Progress Timeline ─── */}
+      <StartOverTimeline
+        milestones={timeline}
+        heading={t('timelineHeading')}
+      />
+
       {/* 2018 beginning photo */}
       <div className="relative w-full max-w-sm mx-auto aspect-[3/4] rounded-2xl overflow-hidden mb-12">
         <Image
@@ -33,11 +46,6 @@ export default async function StartOverPage() {
           </p>
         </div>
       </div>
-
-      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Advice</p>
-      <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-8 leading-tight">
-        {t('heading')}
-      </h1>
 
       <p className="text-text-secondary text-lg leading-relaxed mb-12 border-l-2 border-accent pl-5 italic">
         {t('intro')}

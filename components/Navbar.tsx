@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getTranslations, getLocale } from 'next-intl/server';
 import { LanguageToggle } from './LanguageToggle';
 import { MobileNav } from './MobileNav';
+import { NavLinks } from './NavLinks';
 
 export async function Navbar() {
   const t = await getTranslations('nav');
@@ -31,18 +32,8 @@ export async function Navbar() {
             />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          {/* Desktop nav — client component for active state */}
+          <NavLinks links={links} />
 
           {/* Right: lang toggle + mobile hamburger */}
           <div className="flex items-center gap-3">

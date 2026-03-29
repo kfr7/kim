@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { EmailSignup } from '@/components/EmailSignup';
+import { HeroSection } from '@/components/HeroSection';
+import { MobileHub } from '@/components/MobileHub';
 import type { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -12,70 +14,121 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: t('title'),
       description: t('description'),
-      images: [{ url: '/photos/kim-hero-back-dfyne.jpg', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
+      images: [{ url: '/og', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
     },
   };
 }
 
 const TIKTOK_VIDEO_ID = '7500278697501527338';
 
+// All available photos for the Instagram horizontal strip
+const INSTAGRAM_PHOTOS = [
+  '/photos/kim-gym-mirror-red-shorts.jpg',
+  '/photos/kim-back-tattoo-pulldown.jpg',
+  '/photos/kim-planetfitness-white-leggings.jpg',
+  '/photos/kim-locker-room-converse.jpg',
+  '/photos/kim-bathroom-pink-leggings.jpg',
+  '/photos/kim-locker-room-glutes-teal.jpg',
+  '/photos/kim-2018-beginning.jpg',
+  '/photos/kim-hero-back-dfyne.jpg',
+];
+
 export default async function HomePage() {
   const tHero = await getTranslations('hero');
+  const tStory = await getTranslations('story');
   const tNiche = await getTranslations('niche');
   const tIg = await getTranslations('instagram');
   const tTiktok = await getTranslations('tiktok');
   const tEmail = await getTranslations('emailSignup');
+  const tHub = await getTranslations('mobileHub');
 
   const pillars = tNiche.raw('pillars') as Array<{ title: string; description: string }>;
 
+  // JSON-LD structured data
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Kimberly Vanessa',
+    url: 'https://kimberlyvanessa.com',
+    sameAs: [
+      'https://www.instagram.com/kim.montepeque/',
+      'https://www.tiktok.com/@kim.montepeque',
+    ],
+    jobTitle: 'Fitness Creator',
+    description:
+      'LA-based Latina fitness creator. Glutes & legs specialist. Real training, real results.',
+    image: 'https://kimberlyvanessa.com/photos/kim-hero-back-dfyne.jpg',
+  };
+
   return (
     <>
-      {/* ─── HERO ─── */}
-      <section className="relative min-h-[100svh] flex items-end overflow-hidden">
-        <Image
-          src="/photos/kim-hero-back-dfyne.jpg"
-          alt="Kimberly Vanessa — hero"
-          fill
-          priority
-          className="object-cover object-top"
-          sizes="100vw"
-        />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+      {/* JSON-LD Person Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
-            @kim.montepeque
-          </p>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-text-primary mb-4 leading-tight">
-            {tHero('name')}
-          </h1>
-          <p className="text-xl md:text-2xl text-text-secondary font-serif italic mb-8 max-w-xl">
-            {tHero('tagline')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://www.instagram.com/kim.montepeque/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg transition-colors duration-200"
-            >
-              {tHero('followInstagram')}
-            </a>
-            <Link
-              href="/work-with-me"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-zinc-600 hover:border-accent hover:text-accent text-text-primary font-semibold rounded-lg transition-colors duration-200"
-            >
-              {tHero('workWithMe')}
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* ─── HERO (parallax + centered + fade-in) ─── */}
+      <HeroSection
+        name={tHero('name')}
+        tagline={tHero('tagline')}
+        followInstagram={tHero('followInstagram')}
+        workWithMe={tHero('workWithMe')}
+      />
+
+      {/* ─── MOBILE LINK-IN-BIO HUB ─── */}
+      <MobileHub
+        labels={{
+          instagram: tHub('instagram'),
+          tiktok: tHub('tiktok'),
+          workouts: tHub('workouts'),
+          workWithMe: tHub('workWithMe'),
+        }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* ─── WHAT SHE DOES ─── */}
-        <section className="py-24 border-t border-zinc-800/50" id="what-she-does">
+        {/* ─── MY STORY ─── */}
+        <section className="py-24 border-t border-zinc-800/50" id="story">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* 2018 photo */}
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden max-w-sm mx-auto w-full">
+              <Image
+                src="/photos/kim-2018-beginning.jpg"
+                alt="Kimberly Vanessa — 2018, the beginning"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 90vw, 384px"
+              />
+              <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm rounded-lg px-3 py-1.5">
+                <p className="text-xs font-semibold tracking-wider uppercase text-accent">
+                  {tStory('beginningLabel')}
+                </p>
+              </div>
+            </div>
+
+            {/* Story text */}
+            <div>
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+                {tStory('label')}
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-6 leading-tight">
+                {tStory('heading')}
+              </h2>
+              <div className="space-y-4 text-text-secondary leading-relaxed">
+                <p>{tStory('body1')}</p>
+                <p>{tStory('body2')}</p>
+                <p>{tStory('body3')}</p>
+              </div>
+              <p className="mt-6 text-accent font-semibold font-serif italic">
+                {tStory('cta')}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── WHAT I DO ─── */}
+        <section className="py-24 border-t border-zinc-800/50" id="what-i-do">
           <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
             {tNiche('label')}
           </p>
@@ -111,7 +164,7 @@ export default async function HomePage() {
           </div>
         </section>
 
-        {/* ─── INSTAGRAM ─── */}
+        {/* ─── INSTAGRAM — horizontal scrollable strip ─── */}
         <section className="py-24 border-t border-zinc-800/50" id="instagram">
           <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
             {tIg('label')}
@@ -121,31 +174,29 @@ export default async function HomePage() {
           </h2>
           <p className="text-text-secondary mb-10">{tIg('followerCount')}</p>
 
-          {/* Photo grid teaser */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-            {[
-              '/photos/kim-gym-mirror-red-shorts.jpg',
-              '/photos/kim-back-tattoo-pulldown.jpg',
-              '/photos/kim-planetfitness-white-leggings.jpg',
-              '/photos/kim-locker-room-converse.jpg',
-            ].map((src, i) => (
-              <a
-                key={i}
-                href="https://www.instagram.com/kim.montepeque/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative aspect-square rounded-xl overflow-hidden group"
-              >
-                <Image
-                  src={src}
-                  alt={`Kimberly Vanessa Instagram post ${i + 1}`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/20 transition-colors duration-300" />
-              </a>
-            ))}
+          {/* Horizontal scrollable photo strip */}
+          <div className="no-scrollbar overflow-x-auto pb-4 mb-8 -mx-4 px-4">
+            <div className="flex gap-3" style={{ width: 'max-content' }}>
+              {INSTAGRAM_PHOTOS.map((src, i) => (
+                <a
+                  key={i}
+                  href="https://www.instagram.com/kim.montepeque/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative shrink-0 rounded-xl overflow-hidden group"
+                  style={{ width: '260px', height: '325px' }}
+                >
+                  <Image
+                    src={src}
+                    alt={`Kimberly Vanessa Instagram post ${i + 1}`}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    sizes="260px"
+                  />
+                  <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/15 transition-colors duration-300" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="text-center">

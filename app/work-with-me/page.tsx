@@ -14,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function WorkWithMePage() {
   const t = await getTranslations('workWithMe');
   const contentItems = t.raw('contentTypes.items') as Array<{ type: string; description: string }>;
+  const whatIBringItems = t.raw('whatIBring.items') as Array<{ title: string; description: string }>;
 
   const stats = [
     { value: t('stats.followers'), label: t('stats.followersLabel') },
@@ -58,6 +59,21 @@ export default async function WorkWithMePage() {
         <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">About</p>
         <h2 className="font-serif text-3xl font-bold text-text-primary mb-4">{t('about.heading')}</h2>
         <p className="text-text-secondary leading-relaxed max-w-2xl">{t('about.body')}</p>
+      </section>
+
+      {/* What I Bring */}
+      <section className="mb-20">
+        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Value</p>
+        <h2 className="font-serif text-3xl font-bold text-text-primary mb-8">{t('whatIBring.heading')}</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {whatIBringItems.map((item, i) => (
+            <div key={i} className="bg-surface-2 rounded-2xl p-6 border border-accent/15">
+              <div className="w-6 h-0.5 bg-accent mb-4" />
+              <h3 className="font-semibold text-text-primary mb-2">{item.title}</h3>
+              <p className="text-text-secondary text-sm leading-relaxed">{item.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Content types */}

@@ -13,8 +13,14 @@
     "followInstagram": "Seguir en Instagram",
     "workWithMe": "Trabaja Conmigo"
   },
+  "mobileHub": {
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "workouts": "Mis Entrenamientos",
+    "workWithMe": "Trabaja Conmigo"
+  },
   "story": {
-    "label": "Su Historia",
+    "label": "Mi Historia",
     "heading": "Desde el principio. Cada repetición. Todavía en marcha.",
     "beginningLabel": "2018 — El Comienzo",
     "nowLabel": "Ahora",
@@ -24,7 +30,7 @@
     "cta": "Sígueme. Construyamos juntas."
   },
   "niche": {
-    "label": "Lo Que Hace",
+    "label": "Lo Que Hago",
     "heading": "Especialista en Glúteos y Piernas",
     "philosophy": {
       "heading": "Filosofía de Entrenamiento",
@@ -37,7 +43,7 @@
     "pillars": [
       {
         "title": "Glúteos y Piernas",
-        "description": "La base de su entrenamiento. Hip thrusts, sentadillas búlgaras, RDLs — construido para dar resultados."
+        "description": "La base de mi entrenamiento. Hip thrusts, sentadillas búlgaras, RDLs — construido para dar resultados."
       },
       {
         "title": "Sobrecarga Progresiva",
@@ -64,8 +70,8 @@
     "followerCount": "33K seguidores"
   },
   "emailSignup": {
-    "heading": "Únete al Recorrido",
-    "subheading": "Entrenamientos, tips de nutrición y pláticas reales — directo a tu correo.",
+    "heading": "Recibe mis entrenamientos semanales + lo que como de verdad",
+    "subheading": "Entrenamiento real, comida real, sin rodeos — directo a tu correo.",
     "placeholder": "tu@correo.com",
     "cta": "Unirme",
     "successMessage": "¡Ya estás dentro! Revisa tu correo.",
@@ -336,6 +342,15 @@
         "body": "Sobre todo, tendría más paciencia. El progreso real lleva tiempo. La fuerza, la confianza, la composición corporal y el desarrollo visible vienen del esfuerzo repetido durante semanas y meses — no de intentar apurar el proceso."
       }
     ],
+    "timeline": [
+      { "year": "2018", "label": "Empecé sin experiencia alguna" },
+      { "year": "2019", "label": "Primer año siendo constante" },
+      { "year": "2020", "label": "Progreso visible, confianza creciendo" },
+      { "year": "2021–2022", "label": "Desarrollé mi enfoque en glúteos y piernas" },
+      { "year": "2023", "label": "Construí una comunidad real" },
+      { "year": "2024–Hoy", "label": "Coaching, marca, sistema completo" }
+    ],
+    "timelineHeading": "El Camino",
     "priorities": {
       "heading": "Si Empezara de Cero, Mis Prioridades Serían:",
       "items": [
@@ -368,8 +383,8 @@
       "tiktokFollowersLabel": "Seguidores en TikTok"
     },
     "about": {
-      "heading": "Sobre Kim",
-      "body": "Kimberly Vanessa es una creadora fitness latina radicada en Los Ángeles, CA. Se especializa en el entrenamiento de glúteos y piernas y ha documentado su camino de fuerza desde 2018. Su audiencia son mujeres de 18 a 35 años que se toman en serio la construcción de fuerza y buscan contenido real y cercano — sin filtros ni modas."
+      "heading": "Sobre Mí",
+      "body": "Soy una creadora fitness latina radicada en Los Ángeles, CA. Me especializo en el entrenamiento de glúteos y piernas y he documentado mi camino de fuerza desde 2018. Con 2,204 seguidores en Instagram y 33K en TikTok, mi audiencia son mujeres de 18 a 35 años que se toman en serio la construcción de fuerza y buscan contenido real y cercano — sin filtros ni modas."
     },
     "contentTypes": {
       "heading": "Contenido Que Crea",
@@ -389,6 +404,27 @@
         {
           "type": "Presentación de Productos",
           "description": "Ropa deportiva, suplementos y equipos que realmente usa."
+        }
+      ]
+    },
+    "whatIBring": {
+      "heading": "Lo Que Ofrezco",
+      "items": [
+        {
+          "title": "Audiencia Auténtica",
+          "description": "Mis seguidores son reales — no inflados. Las mujeres que me siguen están genuinamente interesadas en el fitness y listas para actuar ante recomendaciones."
+        },
+        {
+          "title": "Publicación Constante",
+          "description": "Publico regularmente en Instagram y TikTok. Presencia constante significa exposición constante para tu marca."
+        },
+        {
+          "title": "Nicho de Alto Interés",
+          "description": "Glúteos y piernas es un nicho de alta intención de compra. Mi audiencia compra activamente ropa deportiva, suplementos y equipos."
+        },
+        {
+          "title": "Creadora Bilingüe",
+          "description": "Creo contenido en inglés y español — llegando a una audiencia latina más amplia en Estados Unidos."
         }
       ]
     },

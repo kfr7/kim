@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface Exercise {
   name: string;
@@ -30,6 +30,31 @@ interface Props {
 
 export function WorkoutsTabs({ tabs, cardio, overload, exerciseLabel }: Props) {
   const [active, setActive] = useState(0);
+
+  // Restore last-selected tab from localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('kim_workout_tab');
+      if (saved !== null) {
+        const idx = parseInt(saved, 10);
+        if (!isNaN(idx) && idx >= 0 && idx < tabs.length) {
+          setActive(idx);
+        }
+      }
+    } catch {
+      // localStorage unavailable (SSR / private mode)
+    }
+  }, [tabs.length]);
+
+  const handleTabClick = (i: number) => {
+    setActive(i);
+    try {
+      localStorage.setItem('kim_workout_tab', String(i));
+    } catch {
+      // ignore
+    }
+  };
+
   const current = tabs[active];
 
   return (
@@ -39,7 +64,7 @@ export function WorkoutsTabs({ tabs, cardio, overload, exerciseLabel }: Props) {
         {tabs.map((tab, i) => (
           <button
             key={tab.id + i}
-            onClick={() => setActive(i)}
+            onClick={() => handleTabClick(i)}
             className={`px-4 py-3 text-sm font-semibold transition-colors duration-200 border-b-2 -mb-px ${
               active === i
                 ? 'border-accent text-text-primary'

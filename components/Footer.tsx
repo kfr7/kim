@@ -62,6 +62,15 @@ export async function Footer() {
             </Link>
           </div>
 
+          {/* Easter egg dumbbell */}
+          <span
+            className="dumbbell-hover text-lg cursor-default select-none text-text-muted inline-block"
+            title="💪"
+            aria-hidden="true"
+          >
+            🏋️‍♀️
+          </span>
+
           <p className="text-xs text-text-muted">{t('rights')}</p>
         </div>
       </div>

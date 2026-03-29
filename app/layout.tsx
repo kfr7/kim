@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { BackToTop } from '@/components/BackToTop';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -28,11 +29,11 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: 'Kimberly Vanessa',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
+    images: [{ url: '/og', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/og-image.jpg'],
+    images: ['/og'],
   },
   icons: {
     icon: '/favicon.ico',
@@ -69,6 +70,7 @@ export default async function RootLayout({
           <Navbar />
           <main className="pt-16 min-h-screen">{children}</main>
           <Footer />
+          <BackToTop />
         </NextIntlClientProvider>
       </body>
     </html>
