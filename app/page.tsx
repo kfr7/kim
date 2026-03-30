@@ -30,7 +30,6 @@ const INSTAGRAM_PHOTOS = [
   '/photos/kim-locker-room-converse.jpg',
   '/photos/kim-bathroom-pink-leggings.jpg',
   '/photos/kim-locker-room-glutes-teal.jpg',
-  '/photos/kim-2018-beginning.jpg',
   '/photos/kim-hero-back-dfyne.jpg',
 ];
 
@@ -92,40 +91,21 @@ export default async function HomePage() {
         {/* ─── MY STORY ─── */}
         <ScrollReveal>
           <section className="py-24 border-t border-zinc-800/50" id="story">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* 2018 photo */}
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden max-w-sm mx-auto w-full">
-                <Image
-                  src="/photos/kim-2018-beginning.jpg"
-                  alt="Kimberly Vanessa — 2018, the beginning"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 90vw, 384px"
-                />
-                <div className="absolute bottom-4 left-4 bg-background/80 backdrop-blur-sm rounded-lg px-3 py-1.5">
-                  <p className="text-xs font-semibold tracking-wider uppercase text-accent">
-                    {tStory('beginningLabel')}
-                  </p>
-                </div>
+            <div className="max-w-2xl mx-auto">
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+                {tStory('label')}
+              </p>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-6 leading-tight">
+                {tStory('heading')}
+              </h2>
+              <div className="space-y-4 text-text-secondary leading-relaxed">
+                <p>{tStory('body1')}</p>
+                <p>{tStory('body2')}</p>
+                <p>{tStory('body3')}</p>
               </div>
-
-              {/* Story text */}
-              <div>
-                <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
-                  {tStory('label')}
-                </p>
-                <h2 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-6 leading-tight">
-                  {tStory('heading')}
-                </h2>
-                <div className="space-y-4 text-text-secondary leading-relaxed">
-                  <p>{tStory('body1')}</p>
-                  <p>{tStory('body2')}</p>
-                  <p>{tStory('body3')}</p>
-                </div>
-                <p className="mt-6 text-accent font-semibold font-serif italic">
-                  {tStory('cta')}
-                </p>
-              </div>
+              <p className="mt-6 text-accent font-semibold font-serif italic">
+                {tStory('cta')}
+              </p>
             </div>
           </section>
         </ScrollReveal>
