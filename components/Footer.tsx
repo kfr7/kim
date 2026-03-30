@@ -11,7 +11,7 @@ export async function Footer() {
         <div className="flex flex-col items-center gap-6">
           {/* Logo */}
           <Image
-            src="/logos/KV-Logo-transparent.png"
+            src="/logos/KV-Logo-transparent-white.png"
             alt="KV Logo"
             width={48}
             height={48}

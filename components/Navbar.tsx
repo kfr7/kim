@@ -23,7 +23,7 @@ export async function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <Image
-              src="/logos/KV-Logo-transparent.png"
+              src="/logos/KV-Logo-transparent-white.png"
               alt="KV Logo"
               width={40}
               height={40}
