@@ -9,9 +9,18 @@ interface HeroSectionProps {
   tagline: string;
   followInstagram: string;
   workWithMe: string;
+  instagramStat: string;
+  tiktokStat: string;
 }
 
-export function HeroSection({ name, tagline, followInstagram, workWithMe }: HeroSectionProps) {
+export function HeroSection({
+  name,
+  tagline,
+  followInstagram,
+  workWithMe,
+  instagramStat,
+  tiktokStat,
+}: HeroSectionProps) {
   const [offset, setOffset] = useState(0);
   const isMobileRef = useRef(false);
 
@@ -47,7 +56,7 @@ export function HeroSection({ name, tagline, followInstagram, workWithMe }: Hero
           alt="Kimberly Vanessa — hero"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-[center_65%]"
           sizes="100vw"
         />
       </div>
@@ -63,6 +72,14 @@ export function HeroSection({ name, tagline, followInstagram, workWithMe }: Hero
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-text-primary mb-4 leading-tight">
           {name}
         </h1>
+        <div className="flex flex-wrap justify-center gap-3 mb-6">
+          <div className="px-4 py-2 rounded-full border border-white/15 bg-background/70 backdrop-blur-sm text-sm font-semibold uppercase tracking-wide text-text-primary/90">
+            {instagramStat}
+          </div>
+          <div className="px-4 py-2 rounded-full border border-white/15 bg-background/70 backdrop-blur-sm text-sm font-semibold uppercase tracking-wide text-text-primary/90">
+            {tiktokStat}
+          </div>
+        </div>
         <p className="text-xl md:text-2xl text-text-secondary font-serif italic mb-8 max-w-xl mx-auto">
           {tagline}
         </p>

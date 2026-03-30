@@ -30,7 +30,6 @@ const INSTAGRAM_PHOTOS = [
   '/photos/kim-locker-room-converse.jpg',
   '/photos/kim-bathroom-pink-leggings.jpg',
   '/photos/kim-locker-room-glutes-teal.jpg',
-  '/photos/kim-hero-back-dfyne.jpg',
 ];
 
 export default async function HomePage() {
@@ -74,6 +73,8 @@ export default async function HomePage() {
         tagline={tHero('tagline')}
         followInstagram={tHero('followInstagram')}
         workWithMe={tHero('workWithMe')}
+        instagramStat={tHero('instagramStat')}
+        tiktokStat={tHero('tiktokStat')}
       />
 
       {/* ─── MOBILE LINK-IN-BIO HUB ─── */}
