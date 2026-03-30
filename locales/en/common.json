@@ -10,7 +10,6 @@
   "hero": {
     "name": "Kimberly Vanessa",
     "tagline": "Built different. Entrenada con propósito.",
-    "followInstagram": "Follow on Instagram",
     "workWithMe": "Work With Me",
     "instagramStat": "2.2K Instagram followers",
     "tiktokStat": "33K on TikTok"
@@ -76,8 +75,8 @@
     "subheading": "Real training, real food, no fluff — straight to your inbox.",
     "placeholder": "your@email.com",
     "cta": "Join",
-    "successMessage": "You're in! Check your inbox.",
-    "errorMessage": "Something went wrong. Try again."
+    "successMessage": "You're in! We'll send the next update soon.",
+    "errorMessage": "Something went wrong. Please try again later."
   },
   "footer": {
     "tagline": "Built different. Entrenada con propósito.",

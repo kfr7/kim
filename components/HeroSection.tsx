@@ -7,7 +7,6 @@ import Link from 'next/link';
 interface HeroSectionProps {
   name: string;
   tagline: string;
-  followInstagram: string;
   workWithMe: string;
   instagramStat: string;
   tiktokStat: string;
@@ -16,7 +15,6 @@ interface HeroSectionProps {
 export function HeroSection({
   name,
   tagline,
-  followInstagram,
   workWithMe,
   instagramStat,
   tiktokStat,
@@ -73,25 +71,29 @@ export function HeroSection({
           {name}
         </h1>
         <div className="flex flex-wrap justify-center gap-3 mb-6">
-          <div className="px-4 py-2 rounded-full border border-white/15 bg-background/70 backdrop-blur-sm text-sm font-semibold uppercase tracking-wide text-text-primary/90">
-            {instagramStat}
-          </div>
-          <div className="px-4 py-2 rounded-full border border-white/15 bg-background/70 backdrop-blur-sm text-sm font-semibold uppercase tracking-wide text-text-primary/90">
-            {tiktokStat}
-          </div>
-        </div>
-        <p className="text-xl md:text-2xl text-text-secondary font-serif italic mb-8 max-w-xl mx-auto">
-          {tagline}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://www.instagram.com/kim.montepeque/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg transition-colors duration-200"
+            className="px-4 py-2 rounded-full border border-white/15 bg-background/70 backdrop-blur-sm text-sm font-semibold uppercase tracking-wide text-text-primary/90 hover:border-accent/60 hover:text-accent transition-colors"
+            aria-label="Instagram followers"
           >
-            {followInstagram}
+            {instagramStat}
           </a>
+          <a
+            href="https://www.tiktok.com/@kim.montepeque"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-full border border-white/15 bg-background/70 backdrop-blur-sm text-sm font-semibold uppercase tracking-wide text-text-primary/90 hover:border-accent/60 hover:text-accent transition-colors"
+            aria-label="TikTok followers"
+          >
+            {tiktokStat}
+          </a>
+        </div>
+        <p className="text-xl md:text-2xl text-text-secondary font-serif italic mb-8 max-w-xl mx-auto">
+          {tagline}
+        </p>
+        <div className="flex justify-center">
           <Link
             href="/work-with-me"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-zinc-600 hover:border-accent hover:text-accent text-text-primary font-semibold rounded-lg transition-colors duration-200"

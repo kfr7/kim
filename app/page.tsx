@@ -71,7 +71,6 @@ export default async function HomePage() {
       <HeroSection
         name={tHero('name')}
         tagline={tHero('tagline')}
-        followInstagram={tHero('followInstagram')}
         workWithMe={tHero('workWithMe')}
         instagramStat={tHero('instagramStat')}
         tiktokStat={tHero('tiktokStat')}

@@ -8,10 +8,11 @@ export async function POST(req: NextRequest) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
-    if (!apiKey) {
-      // Gracefully accept in dev / before key is set
-      console.log('[subscribe] No RESEND_API_KEY — email received:', email);
-      return NextResponse.json({ ok: true });
+    const audienceId = process.env.RESEND_AUDIENCE_ID;
+
+    if (!apiKey || !audienceId) {
+      console.error('[subscribe] Missing Resend configuration. Cannot add contact.');
+      return NextResponse.json({ error: 'Newsletter is not ready yet. Please try again later.' }, { status: 503 });
     }
 
     const res = await fetch('https://api.resend.com/contacts', {
@@ -22,7 +23,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         email,
-        audience_id: process.env.RESEND_AUDIENCE_ID ?? '',
+        audience_id: audienceId,
         unsubscribed: false,
       }),
     });
