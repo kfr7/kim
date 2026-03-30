@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { WorkoutsTabs } from '@/components/WorkoutsTabs';
+import { ScrollReveal } from '@/components/ScrollReveal';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('meta.workouts');
@@ -72,13 +73,17 @@ export default async function WorkoutsPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Training</p>
-      <h1 className="font-serif text-5xl md:text-6xl font-bold text-text-primary mb-4">
-        {t('heading')}
-      </h1>
-      <p className="text-text-secondary text-lg mb-12 max-w-xl">{t('subheading')}</p>
+      <ScrollReveal>
+        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Training</p>
+        <h1 className="font-serif text-5xl md:text-6xl font-bold text-text-primary mb-4">
+          {t('heading')}
+        </h1>
+        <p className="text-text-secondary text-lg mb-12 max-w-xl">{t('subheading')}</p>
+      </ScrollReveal>
 
-      <WorkoutsTabs tabs={tabs} cardio={cardio} overload={overload} exerciseLabel={t('exerciseLabel')} />
+      <ScrollReveal delay={100}>
+        <WorkoutsTabs tabs={tabs} cardio={cardio} overload={overload} exerciseLabel={t('exerciseLabel')} />
+      </ScrollReveal>
     </div>
   );
 }

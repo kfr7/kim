@@ -47,7 +47,7 @@ export function HeroSection({ name, tagline, followInstagram, workWithMe }: Hero
           alt="Kimberly Vanessa — hero"
           fill
           priority
-          className="object-cover object-top"
+          className="object-cover object-center"
           sizes="100vw"
         />
       </div>
