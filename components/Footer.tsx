@@ -18,10 +18,6 @@ export async function Footer() {
             className="object-contain opacity-80"
           />
 
-          {/* Tagline */}
-          <p className="text-text-secondary text-sm text-center font-serif italic">
-            {t('tagline')}
-          </p>
 
           {/* Social + contact */}
           <div className="flex items-center gap-6 text-sm text-text-secondary">

@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
   try {
-    const { email } = await req.json();
+    const { name, email } = await req.json();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
     }
@@ -23,6 +23,7 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         email,
+        first_name: typeof name === 'string' ? name.trim() : undefined,
         audience_id: audienceId,
         unsubscribed: false,
       }),
@@ -48,7 +49,7 @@ export async function POST(req: NextRequest) {
         from,
         to: email,
         reply_to: replyTo,
-        subject: "You're in — welcome to the journey",
+
         html: `
           <div style="font-family: Inter, Arial, sans-serif; line-height: 1.6;">
             <p>Hey — welcome.</p>

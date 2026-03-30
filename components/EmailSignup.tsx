@@ -5,13 +5,23 @@ import { useState } from 'react';
 interface Props {
   heading: string;
   subheading: string;
+  namePlaceholder: string;
   placeholder: string;
   cta: string;
   successMessage: string;
   errorMessage: string;
 }
 
-export function EmailSignup({ heading, subheading, placeholder, cta, successMessage, errorMessage }: Props) {
+export function EmailSignup({
+  heading,
+  subheading,
+  namePlaceholder,
+  placeholder,
+  cta,
+  successMessage,
+  errorMessage,
+}: Props) {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -23,10 +33,11 @@ export function EmailSignup({ heading, subheading, placeholder, cta, successMess
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ name, email }),
       });
       if (res.ok) {
         setStatus('success');
+        setName('');
         setEmail('');
       } else {
         setStatus('error');
@@ -45,22 +56,31 @@ export function EmailSignup({ heading, subheading, placeholder, cta, successMess
       {status === 'success' ? (
         <p className="text-accent font-medium">{successMessage}</p>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-md mx-auto">
           <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={placeholder}
-            required
-            className="flex-1 px-4 py-3 bg-background border border-zinc-700 rounded-lg text-text-primary placeholder-text-muted focus:outline-none focus:border-accent transition-colors"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder={namePlaceholder}
+            className="w-full px-4 py-3 bg-background border border-zinc-700 rounded-lg text-text-primary placeholder-text-muted focus:outline-none focus:border-accent transition-colors"
           />
-          <button
+          <div className="flex flex-col sm:flex-row gap-3">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={placeholder}
+              required
+              className="flex-1 px-4 py-3 bg-background border border-zinc-700 rounded-lg text-text-primary placeholder-text-muted focus:outline-none focus:border-accent transition-colors"
+            />
+            <button
             type="submit"
             disabled={status === 'loading'}
             className="px-6 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg transition-colors duration-200 disabled:opacity-50 whitespace-nowrap"
           >
             {status === 'loading' ? '...' : cta}
-          </button>
+            </button>
+          </div>
         </form>
       )}
 

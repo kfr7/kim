@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 interface HeroSectionProps {
   name: string;
-  tagline: string;
   workWithMe: string;
   instagramStat: string;
   tiktokStat: string;
@@ -14,7 +13,6 @@ interface HeroSectionProps {
 
 export function HeroSection({
   name,
-  tagline,
   workWithMe,
   instagramStat,
   tiktokStat,
@@ -54,7 +52,7 @@ export function HeroSection({
           alt="Kimberly Vanessa — hero"
           fill
           priority
-          className="object-cover object-[center_65%]"
+          className="object-cover object-[center_20%]"
           sizes="100vw"
         />
       </div>
@@ -90,9 +88,6 @@ export function HeroSection({
             {tiktokStat}
           </a>
         </div>
-        <p className="text-xl md:text-2xl text-text-secondary font-serif italic mb-8 max-w-xl mx-auto">
-          {tagline}
-        </p>
         <div className="flex justify-center">
           <Link
             href="/work-with-me"

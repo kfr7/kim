@@ -9,7 +9,6 @@
   },
   "hero": {
     "name": "Kimberly Vanessa",
-    "tagline": "Built different. Entrenada con propósito.",
     "workWithMe": "Trabaja Conmigo",
     "instagramStat": "2.2K seguidoras en Instagram",
     "tiktokStat": "33K en TikTok"
@@ -73,13 +72,13 @@
   "emailSignup": {
     "heading": "Recibe mis entrenamientos semanales + lo que como de verdad",
     "subheading": "Entrenamiento real, comida real, sin rodeos — directo a tu correo.",
+    "namePlaceholder": "Tu nombre",
     "placeholder": "tu@correo.com",
     "cta": "Unirme",
     "successMessage": "¡Ya estás dentro! Revisa tu correo.",
     "errorMessage": "Algo salió mal. Intenta de nuevo más tarde."
   },
   "footer": {
-    "tagline": "Built different. Entrenada con propósito.",
     "contact": "kimberlyvanessagym@gmail.com",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",

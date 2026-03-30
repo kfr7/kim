@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { EmailSignup } from '@/components/EmailSignup';
 import { HeroSection } from '@/components/HeroSection';
-import { MobileHub } from '@/components/MobileHub';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import type { Metadata } from 'next';
 
@@ -39,7 +38,6 @@ export default async function HomePage() {
   const tIg = await getTranslations('instagram');
   const tTiktok = await getTranslations('tiktok');
   const tEmail = await getTranslations('emailSignup');
-  const tHub = await getTranslations('mobileHub');
 
   const pillars = tNiche.raw('pillars') as Array<{ title: string; description: string }>;
 
@@ -70,27 +68,17 @@ export default async function HomePage() {
       {/* ─── HERO (parallax + centered + fade-in) ─── */}
       <HeroSection
         name={tHero('name')}
-        tagline={tHero('tagline')}
         workWithMe={tHero('workWithMe')}
         instagramStat={tHero('instagramStat')}
         tiktokStat={tHero('tiktokStat')}
       />
 
-      {/* ─── MOBILE LINK-IN-BIO HUB ─── */}
-      <MobileHub
-        labels={{
-          instagram: tHub('instagram'),
-          tiktok: tHub('tiktok'),
-          workouts: tHub('workouts'),
-          workWithMe: tHub('workWithMe'),
-        }}
-      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ─── MY STORY ─── */}
         <ScrollReveal>
-          <section className="py-24 border-t border-zinc-800/50" id="story">
+          <section className="py-14 md:py-20 border-t border-zinc-800/50" id="story">
             <div className="max-w-2xl mx-auto">
               <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
                 {tStory('label')}
@@ -112,7 +100,7 @@ export default async function HomePage() {
 
         {/* ─── WHAT I DO ─── */}
         <ScrollReveal>
-          <section className="py-24 border-t border-zinc-800/50" id="what-i-do">
+          <section className="py-14 md:py-20 border-t border-zinc-800/50" id="what-i-do">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
               {tNiche('label')}
             </p>
@@ -151,7 +139,7 @@ export default async function HomePage() {
 
         {/* ─── INSTAGRAM — horizontal scrollable strip ─── */}
         <ScrollReveal>
-          <section className="py-24 border-t border-zinc-800/50" id="instagram">
+          <section className="py-14 md:py-20 border-t border-zinc-800/50" id="instagram">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
               {tIg('label')}
             </p>
@@ -200,7 +188,7 @@ export default async function HomePage() {
 
         {/* ─── TIKTOK ─── */}
         <ScrollReveal>
-          <section className="py-24 border-t border-zinc-800/50" id="tiktok">
+          <section className="py-14 md:py-20 border-t border-zinc-800/50" id="tiktok">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
               {tTiktok('label')}
             </p>
@@ -236,10 +224,11 @@ export default async function HomePage() {
 
         {/* ─── EMAIL SIGNUP ─── */}
         <ScrollReveal>
-          <section className="py-24 border-t border-zinc-800/50" id="signup">
+          <section className="py-14 md:py-20 border-t border-zinc-800/50" id="signup">
             <EmailSignup
               heading={tEmail('heading')}
               subheading={tEmail('subheading')}
+              namePlaceholder={tEmail('namePlaceholder')}
               placeholder={tEmail('placeholder')}
               cta={tEmail('cta')}
               successMessage={tEmail('successMessage')}
