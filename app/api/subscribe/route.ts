@@ -30,8 +30,39 @@ export async function POST(req: NextRequest) {
 
     if (!res.ok) {
       const err = await res.text();
-      console.error('[subscribe] Resend error:', err);
+      console.error('[subscribe] Resend error (contacts):', err);
       return NextResponse.json({ error: 'Failed to subscribe' }, { status: 500 });
+    }
+
+    // Send welcome email (best-effort)
+    const from = process.env.RESEND_FROM ?? 'onboarding@resend.dev';
+    const replyTo = process.env.RESEND_REPLY_TO ?? 'kimberlyvanessagym@gmail.com';
+
+    const emailRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        from,
+        to: email,
+        reply_to: replyTo,
+        subject: "You're in — welcome to the journey",
+        html: `
+          <div style="font-family: Inter, Arial, sans-serif; line-height: 1.6;">
+            <p>Hey — welcome.</p>
+            <p>You’re officially on the list. I’ll be sharing workouts, nutrition, and updates soon.</p>
+            <p style="margin-top: 24px;">— Kimberly Vanessa</p>
+          </div>
+        `.trim(),
+      }),
+    });
+
+    if (!emailRes.ok) {
+      const err = await emailRes.text();
+      console.error('[subscribe] Resend error (emails):', err);
+      // Don't fail the signup if the welcome email fails
     }
 
     return NextResponse.json({ ok: true });
