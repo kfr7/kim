@@ -10,9 +10,17 @@ export async function POST(req: NextRequest) {
     const apiKey = process.env.RESEND_API_KEY;
     const audienceId = process.env.RESEND_AUDIENCE_ID;
 
+    console.log('[subscribe] env:', {
+      has_RESEND_API_KEY: Boolean(apiKey),
+      has_RESEND_AUDIENCE_ID: Boolean(audienceId),
+    });
+
     if (!apiKey || !audienceId) {
       console.error('[subscribe] Missing Resend configuration. Cannot add contact.');
-      return NextResponse.json({ error: 'Newsletter is not ready yet. Please try again later.' }, { status: 503 });
+      return NextResponse.json(
+        { error: 'Newsletter is not ready yet. Please try again later.' },
+        { status: 503 }
+      );
     }
 
     const res = await fetch('https://api.resend.com/contacts', {
@@ -31,13 +39,18 @@ export async function POST(req: NextRequest) {
 
     if (!res.ok) {
       const err = await res.text();
-      console.error('[subscribe] Resend error (contacts):', err);
+      console.error('[subscribe] Resend error (contacts):', res.status, err);
       return NextResponse.json({ error: 'Failed to subscribe' }, { status: 500 });
     }
 
     // Send welcome email (best-effort)
-    const from = process.env.RESEND_FROM ?? 'onboarding@resend.dev';
+    // Kian has no verified sending domain; use Resend default sender.
+    const from = 'onboarding@resend.dev';
     const replyTo = process.env.RESEND_REPLY_TO ?? 'kimberlyvanessagym@gmail.com';
+
+    const subject = `Welcome${
+      typeof name === 'string' && name.trim() ? ` ${name.trim()}` : ''
+    } to KV Gym`;
 
     const emailRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -49,7 +62,7 @@ export async function POST(req: NextRequest) {
         from,
         to: email,
         reply_to: replyTo,
-        subject: `Welcome${typeof name === 'string' && name.trim() ? ` ${name.trim()}` : ''} to KV Gym`,
+        subject,
         html: `
           <div style="font-family: Inter, Arial, sans-serif; line-height: 1.6;">
             <p>Hey — welcome.</p>
@@ -62,7 +75,7 @@ export async function POST(req: NextRequest) {
 
     if (!emailRes.ok) {
       const err = await emailRes.text();
-      console.error('[subscribe] Resend error (emails):', err);
+      console.error('[subscribe] Resend error (emails):', emailRes.status, err);
       // Don't fail the signup if the welcome email fails
     }
 

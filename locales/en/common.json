@@ -76,7 +76,7 @@
     "namePlaceholder": "Your name",
     "placeholder": "your@email.com",
     "cta": "Join",
-    "successMessage": "Welcome! You're officially subscribed. 💪",
+    "successMessage": "Welcome! You're officially subscribed.",
     "errorMessage": "Something went wrong. Please try again later."
   },
   "footer": {

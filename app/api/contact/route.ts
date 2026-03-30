@@ -8,10 +8,18 @@ export async function POST(req: NextRequest) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
+    console.log('[contact] env:', {
+      has_RESEND_API_KEY: Boolean(apiKey),
+    });
+
     if (!apiKey) {
       console.log('[contact] No RESEND_API_KEY — inquiry received from:', email);
+      // Don't hard-fail the UI if email sending isn't configured.
       return NextResponse.json({ ok: true });
     }
+
+    // Kian has no verified sending domain; use Resend default sender.
+    const from = 'onboarding@resend.dev';
 
     const res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -20,15 +28,17 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: process.env.RESEND_FROM ?? 'onboarding@resend.dev',
+        from,
         to: 'kimberlyvanessagym@gmail.com',
         reply_to: email,
         subject: `Brand inquiry from ${name}`,
-        html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p>`,
+        html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${String(message).replace(/\n/g, '<br>')}</p>`,
       }),
     });
 
     if (!res.ok) {
+      const errText = await res.text();
+      console.error('[contact] Resend error:', res.status, errText);
       return NextResponse.json({ error: 'Failed to send' }, { status: 500 });
     }
 

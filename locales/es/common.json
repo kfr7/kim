@@ -76,7 +76,7 @@
     "namePlaceholder": "Tu nombre",
     "placeholder": "tu@correo.com",
     "cta": "Unirme",
-    "successMessage": "¡Bienvenida! Ya estás suscrita. 💪",
+    "successMessage": "¡Bienvenida! Ya estás suscrita.",
     "errorMessage": "Algo salió mal. Intenta de nuevo más tarde."
   },
   "footer": {

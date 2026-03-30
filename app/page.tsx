@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { InstagramCarousel } from '@/components/InstagramCarousel';
 import { getTranslations } from 'next-intl/server';
 import { EmailSignup } from '@/components/EmailSignup';
 import { HeroSection } from '@/components/HeroSection';
@@ -148,30 +149,10 @@ export default async function HomePage() {
             </h2>
             <p className="text-text-secondary mb-10">{tIg('followerCount')}</p>
 
-            {/* Auto-scrolling infinite carousel */}
-            <div className="overflow-hidden mb-8">
-              <div className="flex gap-3 animate-scroll">
-                {[...INSTAGRAM_PHOTOS, ...INSTAGRAM_PHOTOS].map((src, i) => (
-                  <a
-                    key={i}
-                    href="https://www.instagram.com/kim.montepeque/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative shrink-0 rounded-xl overflow-hidden group"
-                    style={{ width: '260px', height: '325px' }}
-                  >
-                    <Image
-                      src={src}
-                      alt={`Kimberly Vanessa Instagram post ${(i % INSTAGRAM_PHOTOS.length) + 1}`}
-                      fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      sizes="260px"
-                    />
-                    <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/15 transition-colors duration-300" />
-                  </a>
-                ))}
-              </div>
-            </div>
+            <InstagramCarousel
+              photos={INSTAGRAM_PHOTOS}
+              href="https://www.instagram.com/kim.montepeque/"
+            />
 
             <div className="text-center">
               <a
