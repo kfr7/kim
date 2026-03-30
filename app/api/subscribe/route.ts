@@ -76,10 +76,11 @@ export async function POST(req: NextRequest) {
     if (!emailRes.ok) {
       const err = await emailRes.text();
       console.error('[subscribe] Resend error (emails):', emailRes.status, err);
-      // Don't fail the signup if the welcome email fails
+      // Return success for contact add, but include details so the UI/devtools can see it.
+      return NextResponse.json({ ok: true, welcomeEmailSent: false, details: err });
     }
 
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, welcomeEmailSent: true });
   } catch (err) {
     console.error('[subscribe] Unexpected error:', err);
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
