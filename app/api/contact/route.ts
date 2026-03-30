@@ -20,8 +20,9 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: 'website@kimberlyvanessa.com',
+        from: process.env.RESEND_FROM ?? 'onboarding@resend.dev',
         to: 'kimberlyvanessagym@gmail.com',
+        reply_to: email,
         subject: `Brand inquiry from ${name}`,
         html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p>`,
       }),

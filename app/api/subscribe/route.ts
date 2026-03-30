@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
         from,
         to: email,
         reply_to: replyTo,
-
+        subject: `Welcome${typeof name === 'string' && name.trim() ? ` ${name.trim()}` : ''} to KV Gym`,
         html: `
           <div style="font-family: Inter, Arial, sans-serif; line-height: 1.6;">
             <p>Hey — welcome.</p>

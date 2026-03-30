@@ -45,6 +45,13 @@ export default async function WorkWithMePage() {
       </h1>
       <p className="text-text-secondary text-lg mb-16">{t('subheading')}</p>
 
+      {/* Contact form */}
+      <ScrollReveal>
+        <div className="mb-20">
+          <ContactForm {...inquiryStrings} />
+        </div>
+      </ScrollReveal>
+
       {/* Stats */}
       <ScrollReveal>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
@@ -100,10 +107,6 @@ export default async function WorkWithMePage() {
         </section>
       </ScrollReveal>
 
-      {/* Contact form */}
-      <ScrollReveal>
-        <ContactForm {...inquiryStrings} />
-      </ScrollReveal>
     </div>
   );
 }

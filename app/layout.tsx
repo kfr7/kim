@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getLocale, getMessages } from 'next-intl/server';
+import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { BackToTop } from '@/components/BackToTop';
@@ -19,27 +19,31 @@ const inter = Inter({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: 'Kimberly Vanessa — Fitness Creator & Glutes Specialist',
-    template: '%s | Kimberly Vanessa',
-  },
-  description: 'LA-based Latina fitness creator. Glutes & legs specialist. Real training, real results.',
-  metadataBase: new URL('https://kimberlyvanessa.com'),
-  openGraph: {
-    siteName: 'Kimberly Vanessa',
-    type: 'website',
-    images: [{ url: '/og', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    images: ['/og'],
-  },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('meta.home');
+
+  return {
+    title: {
+      default: t('title'),
+      template: '%s | Kimberly Vanessa',
+    },
+    description: t('description'),
+    metadataBase: new URL('https://kimberlyvanessa.com'),
+    openGraph: {
+      siteName: 'Kimberly Vanessa',
+      type: 'website',
+      images: [{ url: '/og', width: 1200, height: 630, alt: 'Kimberly Vanessa' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: ['/og'],
+    },
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/apple-touch-icon.png',
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

@@ -58,22 +58,9 @@ export default async function StartOverPage() {
         </p>
       </ScrollReveal>
 
-      <ScrollReveal>
-        <div className="space-y-10">
-          {sections.map((section, i) => (
-            <div key={i}>
-              <h2 className="font-serif text-2xl font-bold text-text-primary mb-3">
-                {section.heading}
-              </h2>
-              <p className="text-text-secondary leading-relaxed">{section.body}</p>
-            </div>
-          ))}
-        </div>
-      </ScrollReveal>
-
       {/* Priorities callout */}
       <ScrollReveal>
-        <div className="mt-16 bg-surface-2 rounded-2xl p-8 border border-accent/20">
+        <div className="mb-16 bg-surface-2 rounded-2xl p-8 border border-accent/20">
           <div className="w-8 h-0.5 bg-accent mb-5" />
           <h2 className="font-serif text-2xl font-bold text-text-primary mb-6">
             {t('priorities.heading')}
@@ -90,6 +77,20 @@ export default async function StartOverPage() {
           </ol>
         </div>
       </ScrollReveal>
+
+      <ScrollReveal>
+        <div className="space-y-10">
+          {sections.map((section, i) => (
+            <div key={i}>
+              <h2 className="font-serif text-2xl font-bold text-text-primary mb-3">
+                {section.heading}
+              </h2>
+              <p className="text-text-secondary leading-relaxed">{section.body}</p>
+            </div>
+          ))}
+        </div>
+      </ScrollReveal>
+
     </div>
   );
 }

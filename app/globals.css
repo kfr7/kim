@@ -83,3 +83,9 @@ a {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* TikTok iframe dark background */
+iframe[src*='tiktok.com'] {
+  background: transparent !important;
+  color-scheme: dark;
+}

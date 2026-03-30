@@ -62,7 +62,7 @@ export function ContactForm({
           <p className="text-accent font-medium text-lg">{successMessage}</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4 max-w-xl">
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-xl mx-auto">
           <input
             type="text"
             value={form.name}
