@@ -27,10 +27,12 @@ export function ContactForm({
 }: Props) {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorDetails, setErrorDetails] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
+    setErrorDetails(null);
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -41,6 +43,19 @@ export function ContactForm({
         setStatus('success');
         setForm({ name: '', email: '', message: '' });
       } else {
+        let details: string | null = null;
+        try {
+          const data = await res.json();
+          details = typeof data?.details === 'string' ? data.details : JSON.stringify(data);
+        } catch {
+          try {
+            details = await res.text();
+          } catch {
+            details = null;
+          }
+        }
+        if (details) console.error('[ContactForm] /api/contact error:', details);
+        setErrorDetails(details);
         setStatus('error');
       }
     } catch {
@@ -107,7 +122,14 @@ export function ContactForm({
       )}
 
       {status === 'error' && (
-        <p className="text-red-400 text-sm mt-3">{errorMessage}</p>
+        <div className="mt-3 space-y-2">
+          <p className="text-red-400 text-sm">{errorMessage}</p>
+          {errorDetails && (
+            <p className="text-text-muted text-xs break-words">
+              {errorDetails}
+            </p>
+          )}
+        </div>
       )}
     </section>
   );
