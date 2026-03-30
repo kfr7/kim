@@ -35,3 +35,6 @@ next-env.d.ts
 # sitemap
 public/sitemap*.xml
 public/robots.txt
+CLAUDE_TASK.md
+FIX_TASK.md
+IMPROVE_TASK.md
