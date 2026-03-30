@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 interface Props {
+  label: string;
   heading: string;
   subheading: string;
   namePlaceholder: string;
@@ -13,6 +14,7 @@ interface Props {
 }
 
 export function EmailSignup({
+  label,
   heading,
   subheading,
   namePlaceholder,
@@ -49,7 +51,7 @@ export function EmailSignup({
 
   return (
     <section className="bg-surface-2 rounded-2xl px-6 py-12 md:px-12 text-center">
-      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Newsletter</p>
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-3">{label}</p>
       <h2 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mb-3">{heading}</h2>
       <p className="text-text-secondary mb-8 max-w-md mx-auto">{subheading}</p>
 

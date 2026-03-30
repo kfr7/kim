@@ -52,17 +52,15 @@ export function ContactForm({
     'w-full px-4 py-3 bg-background border border-zinc-700 rounded-lg text-text-primary placeholder-text-muted focus:outline-none focus:border-accent transition-colors';
 
   return (
-    <section>
-      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Contact</p>
-      <h2 className="font-serif text-3xl font-bold text-text-primary mb-2">{heading}</h2>
-      <p className="text-text-secondary mb-8">{subheading}</p>
+    <section className="bg-surface-2 rounded-2xl px-6 py-12 md:px-12 text-center">
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-3">Contact</p>
+      <h2 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mb-3">{heading}</h2>
+      <p className="text-text-secondary mb-8 max-w-md mx-auto">{subheading}</p>
 
       {status === 'success' ? (
-        <div className="bg-surface-2 rounded-2xl p-8 text-center border border-accent/20">
-          <p className="text-accent font-medium text-lg">{successMessage}</p>
-        </div>
+        <p className="text-accent font-medium">{successMessage}</p>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4 max-w-xl mx-auto">
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto">
           <input
             type="text"
             value={form.name}
@@ -87,11 +85,11 @@ export function ContactForm({
             rows={5}
             className={inputClass + ' resize-none'}
           />
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex flex-col items-center gap-4">
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-8 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg transition-colors duration-200 disabled:opacity-50"
+              className="px-6 py-3 bg-accent hover:bg-accent-hover text-white font-semibold rounded-lg transition-colors duration-200 disabled:opacity-50 whitespace-nowrap"
             >
               {status === 'loading' ? '...' : cta}
             </button>

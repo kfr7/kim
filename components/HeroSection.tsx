@@ -62,12 +62,12 @@ export function HeroSection({
 
       {/* Centered text with fade-in animation */}
       <div className="animate-hero-fade-in relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
-          @kim.montepeque
-        </p>
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-text-primary mb-4 leading-tight">
           {name}
         </h1>
+        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-6">
+          @kim.montepeque
+        </p>
         <div className="flex flex-wrap justify-center gap-3 mb-6">
           <a
             href="https://www.instagram.com/kim.montepeque/"

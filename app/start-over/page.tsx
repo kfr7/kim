@@ -21,7 +21,7 @@ export default async function StartOverPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Advice</p>
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('label')}</p>
       <h1 className="font-serif text-4xl md:text-5xl font-bold text-text-primary mb-12 leading-tight">
         {t('heading')}
       </h1>

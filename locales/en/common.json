@@ -70,12 +70,13 @@
     "cta": "Follow on TikTok"
   },
   "emailSignup": {
+    "label": "Newsletter",
     "heading": "Get my weekly workouts + what I'm actually eating",
     "subheading": "Real training, real food, no fluff — straight to your inbox.",
     "namePlaceholder": "Your name",
     "placeholder": "your@email.com",
     "cta": "Join",
-    "successMessage": "You're in! Check your inbox.",
+    "successMessage": "Welcome! You're officially subscribed. 💪",
     "errorMessage": "Something went wrong. Please try again later."
   },
   "footer": {
@@ -85,6 +86,7 @@
     "rights": "© 2025 Kimberly Vanessa. All rights reserved."
   },
   "workouts": {
+    "trainingLabel": "Training",
     "pageTitle": "My Workouts",
     "pageDescription": "Kim's full training split — glutes, pull, legs, push, and cardio. Built for real results.",
     "heading": "My Training Split",
@@ -233,6 +235,8 @@
     }
   },
   "diet": {
+    "nutritionLabel": "Nutrition",
+    "recoveryLabel": "Recovery",
     "pageTitle": "My Diet",
     "pageDescription": "Kim's daily nutrition structure — high-protein, balanced meals, and recovery principles.",
     "heading": "Daily Nutrition",
@@ -312,6 +316,7 @@
     }
   },
   "startOver": {
+    "label": "Advice",
     "pageTitle": "What I Would Do If I Started Over",
     "pageDescription": "Kim's honest advice for fitness beginners — what she'd do differently from day one.",
     "heading": "What I Would Do If I Started Over",
@@ -366,6 +371,10 @@
     }
   },
   "workWithMe": {
+    "partnershipsLabel": "Partnerships",
+    "aboutLabel": "About",
+    "valueLabel": "Value",
+    "contentLabel": "Content",
     "pageTitle": "Work With Me",
     "pageDescription": "Partner with Kimberly Vanessa — Latina fitness creator, glutes & legs specialist, 2.2K IG followers.",
     "heading": "Work With Me",

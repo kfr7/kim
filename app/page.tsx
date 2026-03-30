@@ -148,10 +148,10 @@ export default async function HomePage() {
             </h2>
             <p className="text-text-secondary mb-10">{tIg('followerCount')}</p>
 
-            {/* Horizontal scrollable photo strip */}
-            <div className="no-scrollbar overflow-x-auto pb-4 mb-8 -mx-4 px-4">
-              <div className="flex gap-3" style={{ width: 'max-content' }}>
-                {INSTAGRAM_PHOTOS.map((src, i) => (
+            {/* Auto-scrolling infinite carousel */}
+            <div className="overflow-hidden mb-8">
+              <div className="flex gap-3 animate-scroll">
+                {[...INSTAGRAM_PHOTOS, ...INSTAGRAM_PHOTOS].map((src, i) => (
                   <a
                     key={i}
                     href="https://www.instagram.com/kim.montepeque/"
@@ -162,7 +162,7 @@ export default async function HomePage() {
                   >
                     <Image
                       src={src}
-                      alt={`Kimberly Vanessa Instagram post ${i + 1}`}
+                      alt={`Kimberly Vanessa Instagram post ${(i % INSTAGRAM_PHOTOS.length) + 1}`}
                       fill
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       sizes="260px"
@@ -226,6 +226,7 @@ export default async function HomePage() {
         <ScrollReveal>
           <section className="py-14 md:py-20 border-t border-zinc-800/50" id="signup">
             <EmailSignup
+              label={tEmail('label')}
               heading={tEmail('heading')}
               subheading={tEmail('subheading')}
               namePlaceholder={tEmail('namePlaceholder')}

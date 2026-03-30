@@ -74,7 +74,7 @@ export default async function WorkoutsPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <ScrollReveal>
-        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Training</p>
+        <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('trainingLabel')}</p>
         <h1 className="font-serif text-5xl md:text-6xl font-bold text-text-primary mb-4">
           {t('heading')}
         </h1>

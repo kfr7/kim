@@ -39,7 +39,7 @@ export default async function WorkWithMePage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Partnerships</p>
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('partnershipsLabel')}</p>
       <h1 className="font-serif text-5xl md:text-6xl font-bold text-text-primary mb-4">
         {t('heading')}
       </h1>
@@ -67,7 +67,7 @@ export default async function WorkWithMePage() {
       {/* About */}
       <ScrollReveal>
         <section className="mb-16">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">About</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('aboutLabel')}</p>
           <h2 className="font-serif text-3xl font-bold text-text-primary mb-4">{t('about.heading')}</h2>
           <p className="text-text-secondary leading-relaxed max-w-2xl">{t('about.body')}</p>
         </section>
@@ -76,7 +76,7 @@ export default async function WorkWithMePage() {
       {/* What I Bring */}
       <ScrollReveal>
         <section className="mb-20">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Value</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('valueLabel')}</p>
           <h2 className="font-serif text-3xl font-bold text-text-primary mb-8">{t('whatIBring.heading')}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {whatIBringItems.map((item, i) => (
@@ -93,7 +93,7 @@ export default async function WorkWithMePage() {
       {/* Content types */}
       <ScrollReveal>
         <section className="mb-20">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Content</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('contentLabel')}</p>
           <h2 className="font-serif text-3xl font-bold text-text-primary mb-8">{t('contentTypes.heading')}</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             {contentItems.map((item, i) => (

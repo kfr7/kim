@@ -70,12 +70,13 @@
     "followerCount": "33K seguidores"
   },
   "emailSignup": {
+    "label": "Boletín",
     "heading": "Recibe mis entrenamientos semanales + lo que como de verdad",
     "subheading": "Entrenamiento real, comida real, sin rodeos — directo a tu correo.",
     "namePlaceholder": "Tu nombre",
     "placeholder": "tu@correo.com",
     "cta": "Unirme",
-    "successMessage": "¡Ya estás dentro! Revisa tu correo.",
+    "successMessage": "¡Bienvenida! Ya estás suscrita. 💪",
     "errorMessage": "Algo salió mal. Intenta de nuevo más tarde."
   },
   "footer": {
@@ -85,6 +86,7 @@
     "rights": "© 2025 Kimberly Vanessa. Todos los derechos reservados."
   },
   "workouts": {
+    "trainingLabel": "Entrenamiento",
     "pageTitle": "Mis Entrenamientos",
     "pageDescription": "La división de entrenamiento completa de Kim — glúteos, jalones, piernas, empujes y cardio. Construido para resultados reales.",
     "heading": "Mi División de Entrenamiento",
@@ -233,6 +235,8 @@
     }
   },
   "diet": {
+    "nutritionLabel": "Nutrición",
+    "recoveryLabel": "Recuperación",
     "pageTitle": "Mi Dieta",
     "pageDescription": "La estructura de nutrición diaria de Kim — comidas altas en proteína, principios equilibrados y recuperación.",
     "heading": "Nutrición Diaria",
@@ -312,6 +316,7 @@
     }
   },
   "startOver": {
+    "label": "Consejo",
     "pageTitle": "Lo Que Haría Si Empezara de Cero",
     "pageDescription": "El consejo honesto de Kim para principiantes — qué cambiaría desde el primer día.",
     "heading": "Lo Que Haría Si Empezara de Cero",
@@ -366,6 +371,10 @@
     }
   },
   "workWithMe": {
+    "partnershipsLabel": "Colaboraciones",
+    "aboutLabel": "Sobre Mí",
+    "valueLabel": "Valor",
+    "contentLabel": "Contenido",
     "pageTitle": "Trabaja Conmigo",
     "pageDescription": "Asociarse con Kimberly Vanessa — creadora fitness latina, especialista en glúteos y piernas, 2.2K seguidores en IG.",
     "heading": "Trabaja Conmigo",

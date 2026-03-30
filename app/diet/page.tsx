@@ -24,7 +24,7 @@ export default async function DietPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Nutrition</p>
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('nutritionLabel')}</p>
       <h1 className="font-serif text-5xl md:text-6xl font-bold text-text-primary mb-4">
         {t('heading')}
       </h1>
@@ -129,7 +129,7 @@ export default async function DietPage() {
       {/* Recovery callout */}
       <ScrollReveal>
         <section className="border-t border-zinc-800/50 pt-16">
-          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">Recovery</p>
+          <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">{t('recoveryLabel')}</p>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mb-3">
             {t('recovery.heading')}
           </h2>
