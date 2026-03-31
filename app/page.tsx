@@ -34,7 +34,6 @@ const INSTAGRAM_PHOTOS = [
   '/photos/kim-planetfitness-black-set.jpg',
   '/photos/kim-planetfitness-pink-leggings.jpg',
   '/photos/kim-planetfitness-green-leggings-couple.jpg',
-  '/photos/kim-gym-couple-kiss.jpg',
 ];
 
 export default async function HomePage() {
