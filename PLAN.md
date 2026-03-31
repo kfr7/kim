@@ -176,17 +176,31 @@ Alternatives:
 - Gym gear picks
 - Will add once affiliate accounts are set up
 
-### 8b. Merch Store — Dedicated Page (`/shop`)
+### 8b. Merch Store — Dedicated Page (`/shop`) — DEFERRED to Phase 2
 - **Branded merchandise** featuring the purple crescent moon KV logo
 - **Products:**
   - Tote bags
   - Water bottles
   - Protein shake bottles
-- Kian to set up storefront/fulfillment (print-on-demand or similar)
 - All merch follows the purple crescent moon logo branding
-- Page design: product grid with images, prices, and buy/link buttons
-- Phase 1: landing page with product previews + "Coming Soon" or direct links
-- Phase 2: expand product line (apparel, gym accessories, etc.)
+- **Wait for traction first** — get Kim's name out, grow audience, then launch merch
+
+#### Setup Steps (when ready)
+1. Sign up for Shopify Starter ($5/mo) — only fixed cost
+2. Install Printful app in Shopify (free, print-on-demand — no inventory)
+3. Upload crescent moon logo in Printful, pick products, approve mockups, set prices
+4. Push products to Shopify so they're live with checkout
+
+#### Implementation (Option A — simple)
+- Build `/shop` page with static product cards (image, name, price)
+- Each card links directly to Shopify checkout URL
+- No API integration needed — just link out
+- Kian to provide: Shopify product URLs + mockup images from Printful
+
+#### Phase 2 Upgrade (Option B)
+- Shopify Storefront API integration — products pulled dynamically
+- New products added in Shopify auto-appear on `/shop`
+- Needs Storefront API access token from Shopify admin
 
 ### 9. Email Signup
 - Inline section in the page (footer area or dedicated section)
