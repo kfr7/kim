@@ -176,6 +176,18 @@ Alternatives:
 - Gym gear picks
 - Will add once affiliate accounts are set up
 
+### 8b. Merch Store — Dedicated Page (`/shop`)
+- **Branded merchandise** featuring the purple crescent moon KV logo
+- **Products:**
+  - Tote bags
+  - Water bottles
+  - Protein shake bottles
+- Kian to set up storefront/fulfillment (print-on-demand or similar)
+- All merch follows the purple crescent moon logo branding
+- Page design: product grid with images, prices, and buy/link buttons
+- Phase 1: landing page with product previews + "Coming Soon" or direct links
+- Phase 2: expand product line (apparel, gym accessories, etc.)
+
 ### 9. Email Signup
 - Inline section in the page (footer area or dedicated section)
 - **No popup on page load** — purely opt-in, user scrolls to it
