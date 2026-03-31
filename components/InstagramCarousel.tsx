@@ -24,36 +24,43 @@ export function InstagramCarousel({
     const el = containerRef.current;
     if (!el) return;
 
-    let rafId: number;
+    let rafId = 0;
     let lastTs: number | null = null;
     let dir: 1 | -1 = 1;
-    let interacting = false;
-    let interactionTimer: ReturnType<typeof setTimeout> | null = null;
-    let started = false;
+    let hovering = false;
+    let dragging = false;
+    let dragResumeTimer: ReturnType<typeof setTimeout> | null = null;
+    let running = false;
 
-    const markInteracting = () => {
-      interacting = true;
-      if (interactionTimer) { clearTimeout(interactionTimer); interactionTimer = null; }
+    /* ── Hover: pause while pointer is over the carousel ── */
+    const onEnter = () => { hovering = true; };
+    const onLeave = () => { hovering = false; };
+
+    /* ── Drag / touch: pause during active manipulation ── */
+    const onDragStart = () => {
+      dragging = true;
+      if (dragResumeTimer) { clearTimeout(dragResumeTimer); dragResumeTimer = null; }
     };
-    const unmarkSoon = () => {
-      if (interactionTimer) clearTimeout(interactionTimer);
-      interactionTimer = setTimeout(() => { interacting = false; }, 900);
+    const onDragEnd = () => {
+      if (dragResumeTimer) clearTimeout(dragResumeTimer);
+      dragResumeTimer = setTimeout(() => { dragging = false; }, 900);
     };
 
-    el.addEventListener('pointerdown', markInteracting, { passive: true });
-    el.addEventListener('touchstart', markInteracting, { passive: true });
-    window.addEventListener('pointerup', unmarkSoon, { passive: true });
-    el.addEventListener('touchend', unmarkSoon, { passive: true });
+    el.addEventListener('pointerenter', onEnter, { passive: true });
+    el.addEventListener('pointerleave', onLeave, { passive: true });
+    el.addEventListener('pointerdown', onDragStart, { passive: true });
+    el.addEventListener('touchstart', onDragStart, { passive: true });
+    window.addEventListener('pointerup', onDragEnd, { passive: true });
+    el.addEventListener('touchend', onDragEnd, { passive: true });
 
     const step = (ts: number) => {
       if (lastTs === null) lastTs = ts;
-      const dt = Math.min((ts - lastTs) / 1000, 0.05); // cap dt to avoid jumps
+      const dt = Math.min((ts - lastTs) / 1000, 0.05);
       lastTs = ts;
 
-      if (!interacting) {
+      if (!hovering && !dragging) {
         const max = el.scrollWidth - el.clientWidth;
         if (max > 1) {
-          started = true;
           if (el.scrollLeft >= max - 1) dir = -1;
           if (el.scrollLeft <= 1) dir = 1;
           el.scrollLeft += dir * speedPxPerSecond * dt;
@@ -63,42 +70,46 @@ export function InstagramCarousel({
       rafId = requestAnimationFrame(step);
     };
 
-    // Wait for images to load and layout to settle before starting
-    // Use ResizeObserver as the trigger — once the inner row has real width, start.
+    /* ── Start the animation loop (only once) ── */
+    const beginLoop = () => {
+      if (running) return;
+      running = true;
+      rafId = requestAnimationFrame(step);
+    };
+
     const inner = el.firstElementChild as HTMLElement | null;
     let startTimer: ReturnType<typeof setTimeout> | null = null;
 
     const tryStart = () => {
-      if (started) return;
+      if (running) return;
       if (el.scrollWidth > el.clientWidth + 10) {
-        rafId = requestAnimationFrame(step);
+        beginLoop();
       } else {
-        // retry — layout not ready yet
         startTimer = setTimeout(tryStart, 200);
       }
     };
 
     const ro = new ResizeObserver(() => {
-      if (!started && el.scrollWidth > el.clientWidth + 10) {
-        clearTimeout(startTimer!);
-        rafId = requestAnimationFrame(step);
+      if (!running && el.scrollWidth > el.clientWidth + 10) {
+        if (startTimer) clearTimeout(startTimer);
+        beginLoop();
       }
     });
 
     if (inner) ro.observe(inner);
-
-    // Also just try after 600ms as a fallback (covers mobile slow paint)
     startTimer = setTimeout(tryStart, 600);
 
     return () => {
       cancelAnimationFrame(rafId);
       ro.disconnect();
       if (startTimer) clearTimeout(startTimer);
-      if (interactionTimer) clearTimeout(interactionTimer);
-      el.removeEventListener('pointerdown', markInteracting);
-      el.removeEventListener('touchstart', markInteracting);
-      window.removeEventListener('pointerup', unmarkSoon);
-      el.removeEventListener('touchend', unmarkSoon);
+      if (dragResumeTimer) clearTimeout(dragResumeTimer);
+      el.removeEventListener('pointerenter', onEnter);
+      el.removeEventListener('pointerleave', onLeave);
+      el.removeEventListener('pointerdown', onDragStart);
+      el.removeEventListener('touchstart', onDragStart);
+      window.removeEventListener('pointerup', onDragEnd);
+      el.removeEventListener('touchend', onDragEnd);
     };
   }, [speedPxPerSecond]);
 
