@@ -1,12 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface Props {
   photos: string[];
   href: string;
-  /** pixels per second when auto-scrolling */
   speedPxPerSecond?: number;
   cardWidth?: number;
   cardHeight?: number;
@@ -15,13 +14,13 @@ interface Props {
 export function InstagramCarousel({
   photos,
   href,
-  speedPxPerSecond = 20,
+  speedPxPerSecond = 22,
   cardWidth = 260,
   cardHeight = 325,
 }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
 
@@ -30,42 +29,33 @@ export function InstagramCarousel({
     let dir: 1 | -1 = 1;
     let interacting = false;
     let interactionTimer: ReturnType<typeof setTimeout> | null = null;
-    let layoutReady = false;
+    let started = false;
 
     const markInteracting = () => {
       interacting = true;
-      if (interactionTimer) clearTimeout(interactionTimer);
-      interactionTimer = null;
+      if (interactionTimer) { clearTimeout(interactionTimer); interactionTimer = null; }
     };
-
     const unmarkSoon = () => {
       if (interactionTimer) clearTimeout(interactionTimer);
-      interactionTimer = setTimeout(() => {
-        interacting = false;
-      }, 900);
+      interactionTimer = setTimeout(() => { interacting = false; }, 900);
     };
 
-    const onPointerDown = () => markInteracting();
-    const onPointerUp = () => unmarkSoon();
-    const onTouchStart = () => markInteracting();
-    const onTouchEnd = () => unmarkSoon();
-
-    el.addEventListener('pointerdown', onPointerDown, { passive: true });
-    window.addEventListener('pointerup', onPointerUp, { passive: true });
-    el.addEventListener('touchstart', onTouchStart, { passive: true });
-    el.addEventListener('touchend', onTouchEnd, { passive: true });
+    el.addEventListener('pointerdown', markInteracting, { passive: true });
+    el.addEventListener('touchstart', markInteracting, { passive: true });
+    window.addEventListener('pointerup', unmarkSoon, { passive: true });
+    el.addEventListener('touchend', unmarkSoon, { passive: true });
 
     const step = (ts: number) => {
       if (lastTs === null) lastTs = ts;
-      const dt = (ts - lastTs) / 1000;
+      const dt = Math.min((ts - lastTs) / 1000, 0.05); // cap dt to avoid jumps
       lastTs = ts;
 
-      // Only scroll if layout is ready and not interacting
-      if (layoutReady && !interacting) {
+      if (!interacting) {
         const max = el.scrollWidth - el.clientWidth;
-        if (max > 0) {
-          if (el.scrollLeft >= max - 2) dir = -1;
-          if (el.scrollLeft <= 2) dir = 1;
+        if (max > 1) {
+          started = true;
+          if (el.scrollLeft >= max - 1) dir = -1;
+          if (el.scrollLeft <= 1) dir = 1;
           el.scrollLeft += dir * speedPxPerSecond * dt;
         }
       }
@@ -73,34 +63,42 @@ export function InstagramCarousel({
       rafId = requestAnimationFrame(step);
     };
 
-    // Use ResizeObserver to detect when container has real dimensions
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        if (entry.contentRect.width > 0 && el.scrollWidth > el.clientWidth) {
-          layoutReady = true;
-        }
+    // Wait for images to load and layout to settle before starting
+    // Use ResizeObserver as the trigger — once the inner row has real width, start.
+    const inner = el.firstElementChild as HTMLElement | null;
+    let startTimer: ReturnType<typeof setTimeout> | null = null;
+
+    const tryStart = () => {
+      if (started) return;
+      if (el.scrollWidth > el.clientWidth + 10) {
+        rafId = requestAnimationFrame(step);
+      } else {
+        // retry — layout not ready yet
+        startTimer = setTimeout(tryStart, 200);
+      }
+    };
+
+    const ro = new ResizeObserver(() => {
+      if (!started && el.scrollWidth > el.clientWidth + 10) {
+        clearTimeout(startTimer!);
+        rafId = requestAnimationFrame(step);
       }
     });
-    resizeObserver.observe(el);
 
-    // Start RAF loop after 500ms delay to ensure hydration is complete
-    const startTimer = setTimeout(() => {
-      // Double-check layout is ready
-      if (el.scrollWidth > el.clientWidth) {
-        layoutReady = true;
-      }
-      rafId = requestAnimationFrame(step);
-    }, 500);
+    if (inner) ro.observe(inner);
+
+    // Also just try after 600ms as a fallback (covers mobile slow paint)
+    startTimer = setTimeout(tryStart, 600);
 
     return () => {
-      clearTimeout(startTimer);
       cancelAnimationFrame(rafId);
-      resizeObserver.disconnect();
+      ro.disconnect();
+      if (startTimer) clearTimeout(startTimer);
       if (interactionTimer) clearTimeout(interactionTimer);
-      el.removeEventListener('pointerdown', onPointerDown);
-      window.removeEventListener('pointerup', onPointerUp);
-      el.removeEventListener('touchstart', onTouchStart);
-      el.removeEventListener('touchend', onTouchEnd);
+      el.removeEventListener('pointerdown', markInteracting);
+      el.removeEventListener('touchstart', markInteracting);
+      window.removeEventListener('pointerup', unmarkSoon);
+      el.removeEventListener('touchend', unmarkSoon);
     };
   }, [speedPxPerSecond]);
 
@@ -108,6 +106,7 @@ export function InstagramCarousel({
     <div
       ref={containerRef}
       className="no-scrollbar overflow-x-auto pb-4 mb-8 -mx-4 px-4"
+      style={{ WebkitOverflowScrolling: 'touch' }}
       aria-label="Instagram photo carousel"
     >
       <div className="flex gap-3" style={{ width: 'max-content' }}>
