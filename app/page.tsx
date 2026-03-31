@@ -25,10 +25,15 @@ const TIKTOK_VIDEO_ID = '7500278697501527338';
 // All available photos for the Instagram horizontal strip
 const INSTAGRAM_PHOTOS = [
   '/photos/kim-gym-mirror-red-shorts.jpg',
+  '/photos/kim-planetfitness-green-leggings.jpg',
   '/photos/kim-back-tattoo-pulldown.jpg',
+  '/photos/kim-gym-mirror-blue-leggings-red-top.jpg',
   '/photos/kim-planetfitness-white-leggings.jpg',
+  '/photos/kim-mirror-burgundy-curls.jpg',
   '/photos/kim-locker-room-converse.jpg',
+  '/photos/kim-locker-room-burgundy-headphones.jpg',
   '/photos/kim-bathroom-pink-leggings.jpg',
+  '/photos/kim-gym-mirror-pink-leggings.jpg',
   '/photos/kim-locker-room-glutes-teal.jpg',
 ];
 
