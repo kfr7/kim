@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 interface Props {
   photos: string[];
@@ -14,58 +14,104 @@ interface Props {
 export function InstagramCarousel({
   photos,
   href,
-  speedPxPerSecond = 22,
+  speedPxPerSecond = 18,
   cardWidth = 260,
   cardHeight = 325,
 }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const lastTsRef = useRef<number | null>(null);
+  const interactingRef = useRef(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Duplicate for seamless looping
+  const items = useMemo(() => [...photos, ...photos], [photos]);
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
 
-    let rafId: number;
-    let prev: number | null = null;
-    let direction: 1 | -1 = 1;
+    const markInteracting = () => {
+      interactingRef.current = true;
+    };
 
-    function tick(ts: number) {
-      if (prev === null) prev = ts;
-      const dt = Math.min((ts - prev) / 1000, 0.05);
-      prev = ts;
+    let interactionTimeout: ReturnType<typeof setTimeout> | null = null;
+    const unmarkSoon = () => {
+      if (interactionTimeout) clearTimeout(interactionTimeout);
+      interactionTimeout = setTimeout(() => {
+        interactingRef.current = false;
+      }, 900);
+    };
 
-      const max = el!.scrollWidth - el!.clientWidth;
-      if (max > 1) {
-        if (el!.scrollLeft >= max - 1) direction = -1;
-        if (el!.scrollLeft <= 1) direction = 1;
-        el!.scrollLeft += direction * speedPxPerSecond * dt;
+    const onScroll = () => {
+      const half = el.scrollWidth / 2;
+      if (half > 0 && el.scrollLeft >= half) {
+        el.scrollLeft -= half;
       }
+      markInteracting();
+      unmarkSoon();
+    };
 
-      rafId = requestAnimationFrame(tick);
-    }
+    const onPointerDown = () => { markInteracting(); };
+    const onPointerUp = () => { unmarkSoon(); };
+    const onTouchStart = () => { markInteracting(); };
+    const onTouchEnd = () => { unmarkSoon(); };
 
-    // Simple polling: wait until images have loaded and the container is scrollable
-    const pollId = setInterval(() => {
-      if (el.scrollWidth > el.clientWidth + 10) {
-        clearInterval(pollId);
-        rafId = requestAnimationFrame(tick);
-      }
-    }, 100);
+    el.addEventListener('scroll', onScroll, { passive: true });
+    el.addEventListener('pointerdown', onPointerDown, { passive: true });
+    window.addEventListener('pointerup', onPointerUp, { passive: true });
+    el.addEventListener('touchstart', onTouchStart, { passive: true });
+    el.addEventListener('touchend', onTouchEnd, { passive: true });
 
     return () => {
-      clearInterval(pollId);
-      cancelAnimationFrame(rafId);
+      el.removeEventListener('scroll', onScroll);
+      el.removeEventListener('pointerdown', onPointerDown);
+      window.removeEventListener('pointerup', onPointerUp);
+      el.removeEventListener('touchstart', onTouchStart);
+      el.removeEventListener('touchend', onTouchEnd);
+      if (interactionTimeout) clearTimeout(interactionTimeout);
     };
-  }, [speedPxPerSecond]);
+  }, []);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const step = (ts: number) => {
+      if (lastTsRef.current == null) lastTsRef.current = ts;
+      const dt = (ts - lastTsRef.current) / 1000;
+      lastTsRef.current = ts;
+
+      const shouldAutoScroll = !isHovering && !interactingRef.current;
+      if (shouldAutoScroll) {
+        el.scrollLeft += speedPxPerSecond * dt;
+        const half = el.scrollWidth / 2;
+        if (half > 0 && el.scrollLeft >= half) {
+          el.scrollLeft -= half;
+        }
+      }
+
+      rafRef.current = requestAnimationFrame(step);
+    };
+
+    rafRef.current = requestAnimationFrame(step);
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+      lastTsRef.current = null;
+    };
+  }, [isHovering, speedPxPerSecond]);
 
   return (
     <div
       ref={containerRef}
       className="no-scrollbar overflow-x-auto pb-4 mb-8 -mx-4 px-4"
-      style={{ WebkitOverflowScrolling: 'touch' }}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
       aria-label="Instagram photo carousel"
     >
       <div className="flex gap-3" style={{ width: 'max-content' }}>
-        {photos.map((src, i) => (
+        {items.map((src, i) => (
           <a
             key={`${src}-${i}`}
             href={href}
@@ -76,7 +122,7 @@ export function InstagramCarousel({
           >
             <Image
               src={src}
-              alt={`Kimberly Vanessa Instagram post ${i + 1}`}
+              alt={`Kimberly Vanessa Instagram post ${(i % photos.length) + 1}`}
               fill
               className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
               sizes={`${cardWidth}px`}
