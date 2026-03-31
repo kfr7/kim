@@ -16,13 +16,14 @@ export async function POST(req: NextRequest) {
     });
 
     if (!apiKey || !audienceId) {
-      console.error('[subscribe] Missing Resend configuration. Cannot add contact.');
+      console.error('[subscribe] Missing Resend configuration.');
       return NextResponse.json(
         { error: 'Newsletter is not ready yet. Please try again later.' },
         { status: 503 }
       );
     }
 
+    // Add contact to audience
     const res = await fetch('https://api.resend.com/contacts', {
       method: 'POST',
       headers: {
@@ -43,14 +44,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Failed to subscribe' }, { status: 500 });
     }
 
-    // Send welcome email (best-effort)
-    // Kian has no verified sending domain; use Resend default sender.
-    const from = 'onboarding@resend.dev';
+    // Send welcome email from verified domain
+    const from = process.env.RESEND_FROM ?? 'onboarding@resend.dev';
     const replyTo = process.env.RESEND_REPLY_TO ?? 'kimberlyvanessagym@gmail.com';
-
-    const subject = `Welcome${
-      typeof name === 'string' && name.trim() ? ` ${name.trim()}` : ''
-    } to KV Gym`;
+    const subject = `Welcome${typeof name === 'string' && name.trim() ? ` ${name.trim()}` : ''} to KV Gym`;
 
     const emailRes = await fetch('https://api.resend.com/emails', {
       method: 'POST',
@@ -66,7 +63,7 @@ export async function POST(req: NextRequest) {
         html: `
           <div style="font-family: Inter, Arial, sans-serif; line-height: 1.6;">
             <p>Hey — welcome.</p>
-            <p>You’re officially on the list. I’ll be sharing workouts, nutrition, and updates soon.</p>
+            <p>You're officially on the list. I'll be sharing workouts, nutrition, and updates soon.</p>
             <p style="margin-top: 24px;">— Kimberly Vanessa</p>
           </div>
         `.trim(),
@@ -76,7 +73,6 @@ export async function POST(req: NextRequest) {
     if (!emailRes.ok) {
       const err = await emailRes.text();
       console.error('[subscribe] Resend error (emails):', emailRes.status, err);
-      // Return success for contact add, but include details so the UI/devtools can see it.
       return NextResponse.json({ ok: true, welcomeEmailSent: false, details: err });
     }
 
