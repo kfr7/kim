@@ -5,6 +5,7 @@ import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { BackToTop } from '@/components/BackToTop';
+import { AnniversaryModal } from '@/components/AnniversaryModal';
 import './globals.css';
 
 const playfair = Playfair_Display({
@@ -75,6 +76,7 @@ export default async function RootLayout({
           <main className="pt-16 min-h-screen">{children}</main>
           <Footer />
           <BackToTop />
+          <AnniversaryModal />
         </NextIntlClientProvider>
       </body>
     </html>
