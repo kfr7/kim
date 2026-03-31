@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 
 interface Props {
   photos: string[];
@@ -21,7 +21,7 @@ export function InstagramCarousel({
 }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = containerRef.current;
     if (!el) return;
 
@@ -30,6 +30,7 @@ export function InstagramCarousel({
     let dir: 1 | -1 = 1;
     let interacting = false;
     let interactionTimer: ReturnType<typeof setTimeout> | null = null;
+    let layoutReady = false;
 
     const markInteracting = () => {
       interacting = true;
@@ -44,13 +45,11 @@ export function InstagramCarousel({
       }, 900);
     };
 
-    const onScroll = () => { markInteracting(); unmarkSoon(); };
     const onPointerDown = () => markInteracting();
     const onPointerUp = () => unmarkSoon();
     const onTouchStart = () => markInteracting();
     const onTouchEnd = () => unmarkSoon();
 
-    el.addEventListener('scroll', onScroll, { passive: true });
     el.addEventListener('pointerdown', onPointerDown, { passive: true });
     window.addEventListener('pointerup', onPointerUp, { passive: true });
     el.addEventListener('touchstart', onTouchStart, { passive: true });
@@ -61,7 +60,8 @@ export function InstagramCarousel({
       const dt = (ts - lastTs) / 1000;
       lastTs = ts;
 
-      if (!interacting) {
+      // Only scroll if layout is ready and not interacting
+      if (layoutReady && !interacting) {
         const max = el.scrollWidth - el.clientWidth;
         if (max > 0) {
           if (el.scrollLeft >= max - 2) dir = -1;
@@ -73,16 +73,30 @@ export function InstagramCarousel({
       rafId = requestAnimationFrame(step);
     };
 
-    // Small delay so layout is fully painted before we start scrolling
+    // Use ResizeObserver to detect when container has real dimensions
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.contentRect.width > 0 && el.scrollWidth > el.clientWidth) {
+          layoutReady = true;
+        }
+      }
+    });
+    resizeObserver.observe(el);
+
+    // Start RAF loop after 500ms delay to ensure hydration is complete
     const startTimer = setTimeout(() => {
+      // Double-check layout is ready
+      if (el.scrollWidth > el.clientWidth) {
+        layoutReady = true;
+      }
       rafId = requestAnimationFrame(step);
-    }, 300);
+    }, 500);
 
     return () => {
       clearTimeout(startTimer);
       cancelAnimationFrame(rafId);
+      resizeObserver.disconnect();
       if (interactionTimer) clearTimeout(interactionTimer);
-      el.removeEventListener('scroll', onScroll);
       el.removeEventListener('pointerdown', onPointerDown);
       window.removeEventListener('pointerup', onPointerUp);
       el.removeEventListener('touchstart', onTouchStart);
