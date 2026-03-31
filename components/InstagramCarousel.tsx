@@ -24,92 +24,36 @@ export function InstagramCarousel({
     const el = containerRef.current;
     if (!el) return;
 
-    let rafId = 0;
-    let lastTs: number | null = null;
-    let dir: 1 | -1 = 1;
-    let hovering = false;
-    let dragging = false;
-    let dragResumeTimer: ReturnType<typeof setTimeout> | null = null;
-    let running = false;
+    let rafId: number;
+    let prev: number | null = null;
+    let direction: 1 | -1 = 1;
 
-    /* ── Hover: pause while pointer is over the carousel ── */
-    const onEnter = () => { hovering = true; };
-    const onLeave = () => { hovering = false; };
+    function tick(ts: number) {
+      if (prev === null) prev = ts;
+      const dt = Math.min((ts - prev) / 1000, 0.05);
+      prev = ts;
 
-    /* ── Drag / touch: pause during active manipulation ── */
-    const onDragStart = () => {
-      dragging = true;
-      if (dragResumeTimer) { clearTimeout(dragResumeTimer); dragResumeTimer = null; }
-    };
-    const onDragEnd = () => {
-      if (dragResumeTimer) clearTimeout(dragResumeTimer);
-      dragResumeTimer = setTimeout(() => { dragging = false; }, 900);
-    };
-
-    el.addEventListener('pointerenter', onEnter, { passive: true });
-    el.addEventListener('pointerleave', onLeave, { passive: true });
-    el.addEventListener('pointerdown', onDragStart, { passive: true });
-    el.addEventListener('touchstart', onDragStart, { passive: true });
-    window.addEventListener('pointerup', onDragEnd, { passive: true });
-    el.addEventListener('touchend', onDragEnd, { passive: true });
-
-    const step = (ts: number) => {
-      if (lastTs === null) lastTs = ts;
-      const dt = Math.min((ts - lastTs) / 1000, 0.05);
-      lastTs = ts;
-
-      if (!hovering && !dragging) {
-        const max = el.scrollWidth - el.clientWidth;
-        if (max > 1) {
-          if (el.scrollLeft >= max - 1) dir = -1;
-          if (el.scrollLeft <= 1) dir = 1;
-          el.scrollLeft += dir * speedPxPerSecond * dt;
-        }
+      const max = el!.scrollWidth - el!.clientWidth;
+      if (max > 1) {
+        if (el!.scrollLeft >= max - 1) direction = -1;
+        if (el!.scrollLeft <= 1) direction = 1;
+        el!.scrollLeft += direction * speedPxPerSecond * dt;
       }
 
-      rafId = requestAnimationFrame(step);
-    };
+      rafId = requestAnimationFrame(tick);
+    }
 
-    /* ── Start the animation loop (only once) ── */
-    const beginLoop = () => {
-      if (running) return;
-      running = true;
-      rafId = requestAnimationFrame(step);
-    };
-
-    const inner = el.firstElementChild as HTMLElement | null;
-    let startTimer: ReturnType<typeof setTimeout> | null = null;
-
-    const tryStart = () => {
-      if (running) return;
+    // Simple polling: wait until images have loaded and the container is scrollable
+    const pollId = setInterval(() => {
       if (el.scrollWidth > el.clientWidth + 10) {
-        beginLoop();
-      } else {
-        startTimer = setTimeout(tryStart, 200);
+        clearInterval(pollId);
+        rafId = requestAnimationFrame(tick);
       }
-    };
-
-    const ro = new ResizeObserver(() => {
-      if (!running && el.scrollWidth > el.clientWidth + 10) {
-        if (startTimer) clearTimeout(startTimer);
-        beginLoop();
-      }
-    });
-
-    if (inner) ro.observe(inner);
-    startTimer = setTimeout(tryStart, 600);
+    }, 100);
 
     return () => {
+      clearInterval(pollId);
       cancelAnimationFrame(rafId);
-      ro.disconnect();
-      if (startTimer) clearTimeout(startTimer);
-      if (dragResumeTimer) clearTimeout(dragResumeTimer);
-      el.removeEventListener('pointerenter', onEnter);
-      el.removeEventListener('pointerleave', onLeave);
-      el.removeEventListener('pointerdown', onDragStart);
-      el.removeEventListener('touchstart', onDragStart);
-      window.removeEventListener('pointerup', onDragEnd);
-      el.removeEventListener('touchend', onDragEnd);
     };
   }, [speedPxPerSecond]);
 
