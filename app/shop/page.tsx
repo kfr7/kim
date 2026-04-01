@@ -12,63 +12,44 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+interface ShopifyImage {
+  id: number;
+  src: string;
+  alt: string | null;
+}
+
+interface ShopifyVariant {
+  price: string;
+}
+
 interface ShopifyProduct {
-  id: string;
+  id: number;
   title: string;
   handle: string;
-  description: string;
-  images: { edges: Array<{ node: { url: string; altText: string | null } }> };
-  priceRange: { minVariantPrice: { amount: string; currencyCode: string } };
-  onlineStoreUrl: string | null;
+  body_html: string;
+  images: ShopifyImage[];
+  variants: ShopifyVariant[];
 }
 
 async function getProducts(): Promise<ShopifyProduct[]> {
   const domain = process.env.SHOPIFY_STORE_DOMAIN;
-  const token = process.env.SHOPIFY_STOREFRONT_TOKEN;
+  const token = process.env.SHOPIFY_ACCESS_TOKEN;
 
   if (!domain || !token) {
-    console.error('[shop] Missing SHOPIFY_STORE_DOMAIN or SHOPIFY_STOREFRONT_TOKEN');
+    console.error('[shop] Missing SHOPIFY_STORE_DOMAIN or SHOPIFY_ACCESS_TOKEN');
     return [];
   }
 
   try {
-    const res = await fetch(`https://${domain}/api/2024-01/graphql.json`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Shopify-Storefront-Access-Token': token,
+    const res = await fetch(
+      `https://${domain}/admin/api/2026-04/products.json?limit=20&status=active`,
+      {
+        headers: {
+          'X-Shopify-Access-Token': token,
+        },
+        next: { revalidate: 300 },
       },
-      body: JSON.stringify({
-        query: `{
-          products(first: 20) {
-            edges {
-              node {
-                id
-                title
-                handle
-                description
-                images(first: 1) {
-                  edges {
-                    node {
-                      url
-                      altText
-                    }
-                  }
-                }
-                priceRange {
-                  minVariantPrice {
-                    amount
-                    currencyCode
-                  }
-                }
-                onlineStoreUrl
-              }
-            }
-          }
-        }`,
-      }),
-      next: { revalidate: 300 }, // revalidate every 5 minutes
-    });
+    );
 
     if (!res.ok) {
       console.error('[shop] Shopify API error:', res.status, await res.text());
@@ -76,16 +57,21 @@ async function getProducts(): Promise<ShopifyProduct[]> {
     }
 
     const data = await res.json();
-    return data.data.products.edges.map((e: { node: ShopifyProduct }) => e.node);
+    return data.products ?? [];
   } catch (err) {
     console.error('[shop] Failed to fetch products:', err);
     return [];
   }
 }
 
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]*>/g, '').trim();
+}
+
 export default async function ShopPage() {
   const t = await getTranslations('shop');
   const products = await getProducts();
+  const domain = process.env.SHOPIFY_STORE_DOMAIN;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -105,15 +91,15 @@ export default async function ShopPage() {
 
       {products.length > 0 ? (
         <ShopGrid products={products.map((p) => ({
-          id: p.id,
+          id: String(p.id),
           title: p.title,
           handle: p.handle,
-          description: p.description,
-          imageUrl: p.images.edges[0]?.node.url ?? '',
-          imageAlt: p.images.edges[0]?.node.altText ?? p.title,
-          price: parseFloat(p.priceRange.minVariantPrice.amount).toFixed(2),
-          currency: p.priceRange.minVariantPrice.currencyCode,
-          url: p.onlineStoreUrl ?? `https://${process.env.SHOPIFY_STORE_DOMAIN}/products/${p.handle}`,
+          description: p.body_html ? stripHtml(p.body_html) : '',
+          imageUrl: p.images[0]?.src ?? '',
+          imageAlt: p.images[0]?.alt ?? p.title,
+          price: parseFloat(p.variants[0]?.price ?? '0').toFixed(2),
+          currency: 'USD',
+          url: `https://${domain}/products/${p.handle}`,
         }))} buyLabel={t('buy')} />
       ) : (
         <ScrollReveal>
