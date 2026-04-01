@@ -5,6 +5,7 @@
     "diet": "Diet",
     "startOver": "Start Journey",
     "workWithMe": "Work With Me",
+    "shop": "Shop",
     "toggleLang": "ES"
   },
   "hero": {
@@ -516,6 +517,13 @@
     "subheading": "The page you're looking for doesn't exist.",
     "cta": "Back to Home"
   },
+  "shop": {
+    "label": "Merch",
+    "heading": "Shop KV",
+    "subheading": "Rep the brand. Purple moon energy.",
+    "buy": "Shop Now",
+    "empty": "Products coming soon — stay tuned."
+  },
   "meta": {
     "home": {
       "title": "Kimberly Vanessa — Fitness Creator & Glutes Specialist",
@@ -536,6 +544,10 @@
     "workWithMe": {
       "title": "Work With Me — Kimberly Vanessa",
       "description": "Partner with Kimberly Vanessa. Latina fitness creator, 2.2K Instagram followers, glutes & legs specialist."
+    },
+    "shop": {
+      "title": "Shop — Kimberly Vanessa",
+      "description": "Official KV merch — tote bags, water bottles, and more. Rep the purple moon."
     }
   }
 }

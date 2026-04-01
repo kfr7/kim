@@ -5,6 +5,7 @@
     "diet": "Dieta",
     "startOver": "Comenzar",
     "workWithMe": "Trabaja Conmigo",
+    "shop": "Tienda",
     "toggleLang": "EN"
   },
   "hero": {
@@ -516,6 +517,13 @@
     "subheading": "La página que buscas no existe.",
     "cta": "Volver al Inicio"
   },
+  "shop": {
+    "label": "Merch",
+    "heading": "Tienda KV",
+    "subheading": "Representa la marca. Energía de luna morada.",
+    "buy": "Comprar",
+    "empty": "Productos próximamente — mantente atenta."
+  },
   "meta": {
     "home": {
       "title": "Kimberly Vanessa — Creadora Fitness y Especialista en Glúteos",
@@ -536,6 +544,10 @@
     "workWithMe": {
       "title": "Trabaja Conmigo — Kimberly Vanessa",
       "description": "Asociarse con Kimberly Vanessa. Creadora fitness latina, 2.2K seguidores en Instagram, especialista en glúteos y piernas."
+    },
+    "shop": {
+      "title": "Tienda — Kimberly Vanessa",
+      "description": "Merch oficial de KV — bolsas, botellas de agua y más. Representa la luna morada."
     }
   }
 }

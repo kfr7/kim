@@ -14,6 +14,7 @@ export async function Navbar() {
     { href: '/diet', label: t('diet') },
     { href: '/start-over', label: t('startOver') },
     { href: '/work-with-me', label: t('workWithMe') },
+    { href: '/shop', label: t('shop') },
   ];
 
   return (
