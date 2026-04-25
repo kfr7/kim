@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
         {/* Hero photo background */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={`${origin}/photos/kim-hero-back-dfyne.jpg`}
+          src={`${origin}/photos/new_hero.PNG`}
           alt=""
           style={{
             position: 'absolute',
