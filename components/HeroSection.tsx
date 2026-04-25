@@ -48,7 +48,7 @@ export function HeroSection({
         style={{ transform: `translateY(${offset}px)`, willChange: 'transform' }}
       >
         <Image
-          src="/photos/kim-hero-back-dfyne.jpg"
+          src="/photos/new_hero.PNG"
           alt="Kimberly Vanessa — hero"
           fill
           priority

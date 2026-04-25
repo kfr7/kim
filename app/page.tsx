@@ -59,7 +59,7 @@ export default async function HomePage() {
     jobTitle: 'Fitness Creator',
     description:
       'LA-based Latina fitness creator. Glutes & legs specialist. Real training, real results.',
-    image: 'https://kimberlyvanessa.com/photos/kim-hero-back-dfyne.jpg',
+    image: 'https://kimberlyvanessa.com/photos/new_hero.PNG',
   };
 
   return (
